@@ -128,7 +128,7 @@ Let's play thru a commit cycle. Code away, build something great.
 
 ```bash
 # go to testing branch
-git checkout my-app-stage
+git checkout my-app-test
 # make changes..
 git commit -am 'My changeset'
 # the push will automatically push to the testing App, since the branch was linked to it
