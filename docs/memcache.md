@@ -44,12 +44,12 @@ All PHP production scaling are running on two Nodes. If your App needs to handle
 
 ## Scaling
 
-In the Dashboard, go to your App and click on Memcache under the scaling options. Please also see the [Memcache scaling](scaling#toc-memcache) section. 
+In the Dashboard, go to your App and click on Memcache under the scaling options. Please also see the [Memcache scaling](scaling#toc-memcache) section.
 
 Using a plan with two Nodes allow you two modes:
 
 1. **Combined**: data is stored only on one of the nodes > twice the memory size
-2. **Redundant**: data is stored on both nodes > one nodes can fail
+2. **Redundant**: data is stored on both nodes > one node can fail
 
 The former mode is not recommended. So here is how you enable redundant mode when using the `Memcached` library:
 

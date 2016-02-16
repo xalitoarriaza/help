@@ -21,24 +21,24 @@ blogLinks:
 
 ## Goal
 
-**Move fast, break nothing.** Experimenting without downtimes. Multi staging is is quite the opposite of open heart surgery — it's an advanced strategy to run the same application in separate similar environments. It's especially useful in teams but can also bring benefits for the one-man-army.
+**Move fast, break nothing.** Experimenting without downtimes. Multi staging is quite the opposite of open heart surgery — it's an advanced strategy to run the same application in separate similar environments. It's especially useful in teams but can also bring benefits for the one-man-army.
 
 ### Use cases
 
 * **Feature development**: Build a new version while still being able to fix bugs in the running App without uploading all the new feature code.
 * **Purpose separation**: The backend team can break things while the front team can still work on.
-* **Continuous integration**: Code needs to be tested and monitored before deployed into to the live App.
+* **Continuous integration**: Code needs to be tested and monitored before being deployed to the live App.
 
 
 ### Common set ups
 
 * **staging + production**: "Staging" is where you do your development. "Production" runs the live App. From time to time you migrate all the (stable) changes from staging into production.
-* **temporary + production**: Same as above,  it's more of a one-time-developed project. Maybe once a year their is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
+* **temporary + production**: Same as above, it's more of a one-time-developed project. Maybe once a year there is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
 * **testing + staging + production**: Code changes are made to the testing environment. Once they seem stable, they get published to the staging where they are monitored and further tested. Finally they get published to production.
 
 ### Differences to local development
 
-Most likely you are developing with a local PHP environment on your machine. So your laptop is already a of kind of **staging** while the actual App at fortrabbit is **production**.
+Most likely you are developing with a local PHP environment on your machine. So your laptop is already a kind of **staging** while the actual App at fortrabbit is **production**.
 
 A key aspect of multi-staging is that environments are nearly identical environments of production and development. A Mac with Mamp for example is for sure a bit different to the fortrabbit environment.
 
@@ -49,7 +49,7 @@ Virtualization is a way to make your local environment behave more like the one 
 
 People often assume that various Git branches are all it takes to set up different versions of an App on fortrabbit. Unfortunatly that's only half of the way.
 
-Multi staging doesn't necessarily requires Git – but it's a good match. Using local branches to map the different App versions is a good idea, as they all share the same code base.
+Multi staging doesn't necessarily require Git – but it's a good match. Using local branches to map the different App versions is a good idea, as they all share the same code base.
 
 On fortrabbit only the [master branch get's deployed](git#toc-only-the-master-branch-will-be-deployed) on webspace. Use multiple Apps, a dedicated one for each branch, map local branches to remote master branches.
 
@@ -101,7 +101,7 @@ For [New Apps](new-apps) you can name your local branch like your App name and p
 
 WORD: If you cloned from a completely virgin App, you need to make a first, local commit. This will create and settle the local branch `master`.
 
-First rename the `master` branch to `test`. It will keep it's tracking to the `testing` remote's `master` branch, which is intended. Then create the two additional (`stage` and `prod`) branches and map them to the appropriate remote's `master` branch.
+First rename the `master` branch to `test`. It will keep its tracking to the `testing` remote's `master` branch, which is intended. Then create the two additional (`stage` and `prod`) branches and map them to the appropriate remote's `master` branch.
 
 ```bash
 # setup test -> testing
