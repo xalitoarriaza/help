@@ -35,7 +35,7 @@ Most commonly you add your external Git-provider as one remote and fortrabbit as
 
 ## Deployment chain
 
-It is also possible to create a deployment chain with Git post hooks: You push to GitHub/Bitbucket first, that trigger a hook that pushes to fortrabbit as well, then it get's deployed. This way you can also integrate testing with Continuous Integration › only deploy to fortrabbit when all test are OK.
+It is also possible to create a deployment chain with Git post hooks: You push to GitHub/Bitbucket first, that trigger a hook that pushes to fortrabbit as well, then it gets deployed. This way you can also integrate testing with Continuous Integration › only deploy to fortrabbit when all test are OK.
 
 #### Adding and and pushing to an additional remote
 
@@ -46,7 +46,7 @@ cd your-project-folder
 # add fortrabbit as an additional remote to GitHub/Bitbucket
 git remote add fortrabbit git@git1.eu1.frbit.com:my-app.git
 
-# pushing to fortrabbit instead of pishing to master
+# pushing to fortrabbit instead of pushing to master
 git push fortrabbit
 
 # map fortrabbit to the master branch (optional)
@@ -56,9 +56,9 @@ git config remote.fortrabbit.push refs/heads/YOUR-LOCAL-BRANCH:refs/heads/master
 
 ### GitHub API limits and Composer
 
-The reason why you can run into this issue temporarily is that GitHub limits it's API per IP. Given that you deploy on our Git servers (or use composer from our SSH servers) this IP address is shared with other developers deploying there as well. So if there is a deployment spike, GitHub might close down for a while.
+The reason why you can run into this issue temporarily is that GitHub limits its API per IP. Given that you deploy on our Git servers (or use composer from our SSH servers) this IP address is shared with other developers deploying there as well. So if there is a deployment spike, GitHub might close down for a while.
 
-There are two ways to circumvent the limit: The first is just to enter your github username and password when you are asked for. The second, more permanent solution, is to create a GitHub OAuth token and put it in your @composer.json@ file.
+There are two ways to circumvent the limit: the first is just to enter your github username and password when you are asked for. The second, more permanent solution, is to create a GitHub OAuth token and put it in your @composer.json@ file.
 
 #### Create a GitHub OAuth token
 
