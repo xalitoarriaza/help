@@ -10,7 +10,7 @@ tags:
 
 ---
 
-[Grav](http://getgrav.org)  runs pretty much out of the box, as long as you use the [zip package installation](http://learn.getgrav.org/basics/installation#option-1-install-from-zip-package) installation method and not the [GitHub installation](http://learn.getgrav.org/basics/installation#option-2-install-from-github) method.
+[Grav](http://getgrav.org) runs pretty much out of the box, as long as you use the [zip package installation](http://learn.getgrav.org/basics/installation#option-1-install-from-zip-package) installation method and not the [GitHub installation](http://learn.getgrav.org/basics/installation#option-2-install-from-github) method.
 
 Install
 -------
@@ -46,7 +46,7 @@ Done. Your Grav site is now online and you can visit it in your browser!
 Tuning
 ------
 
-Word: The above guide is just the quickest and most basic way to get things up. Please mind that there are various ways to install and manage Grav. Apart from downloading you can: use Composer, clone the Git repo directly and also use the Grav CLI. Advanced users might also consider to have separated repos for the Grav core, Plugins, Themes and the actual content in pages. 
+Word: The above guide is just the quickest and most basic way to get things up. Please mind that there are various ways to install and manage Grav. Apart from downloading you can: use Composer, clone the Git repo directly and also use the Grav CLI. Advanced users might also consider to have separated repos for the Grav core, Plugins, Themes and the actual content in pages.
 
 
 
@@ -89,6 +89,6 @@ Done.
 
 ### Grav Admin VS ephemeral storage
 
-The popular [Grav Admin plugin](https://learn.getgrav.org/admin-panel/introduction) provides a way to manage a site in a guided web interface similar to the "wp-admin". This is great, when you want your client to manage her/his Grav site her/himself. Unfortunately it does not play well with ephemeral storage. Like with other PaaS — the local file system storage of the App will be wiped on each deploy — think 12-factor-app. So all local changes made in the Garv Admin panel will be gone. 
+The popular [Grav Admin plugin](https://learn.getgrav.org/admin-panel/introduction) provides a way to manage a site in a guided web interface similar to the "wp-admin". This is great, when you want your client to manage her/his Grav site her/himself. Unfortunately it does not play well with ephemeral storage. Like with other PaaS — the local file system storage of the App will be wiped on each deploy — think 12-factor-app. So all local changes made in the Grav Admin panel will be gone.
 
 Currently you should: use Grav on fortrabbit for your own private projects where you: write locally in your text editor, handle the pages in Git.

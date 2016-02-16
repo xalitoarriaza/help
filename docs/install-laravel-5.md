@@ -15,14 +15,14 @@ tags:
 Install
 -------
 
-We assume you've already created a New App with fortrabbit. You also need a local [Laravel](http://laravel.com/docs/5.1/installation) installation. You can either use an existing one or intialize a new one. For a new one execute locally:
+We assume you've already created a New App with fortrabbit. You also need a local [Laravel](http://laravel.com/docs/5.1/installation) installation. You can either use an existing one or initialize a new one. For a new one execute locally:
 
 ```bash
 $ cd ~/Projects
 $ composer create-project laravel/laravel --prefer-dist MyApp
 ```
 
-In any case: Change into your local app directory, make sure it is initialized as a Git repo, everything is added and add your App's Git remote:
+In any case: change into your local app directory, make sure it is initialized as a Git repo, everything is added and add your App's Git remote:
 
 ```bash
 $ cd ~/Projects/MyApp
@@ -55,11 +55,11 @@ When the push is done you can visit your App URL in the browser and see the Lara
 Tuning
 ------
 
-The above will give you an up an running App. However, to make the most of Laravel on fortabbit, it needs some tuning.
+The above will give you an up and running App. However, to make the most of Laravel on fortabbit, it needs some tuning.
 
 ### Logging
 
-Per default Laravel writes all logs to `storage/log/..`. Since you don't have direct file access, you need to configure Laravel to write to the PHP `error_log` method instead. That's easily done: Open `boostrap/app.php` and add the following just before the `return $app` statement at the bottom:
+Per default Laravel writes all logs to `storage/log/..`. Since you don't have direct file access, you need to configure Laravel to write to the PHP `error_log` method instead. That's easily done: open `boostrap/app.php` and add the following just before the `return $app` statement at the bottom:
 
 ```php
 $app->configureMonologUsing(function($monolog) {
@@ -163,7 +163,7 @@ return [
 ];
 ```
 
-In addition, set the `CACHE_DRIVER` [environment variable](env-vars) so that you can use `memcached` in your produciton App on fortrabbit and `apc` or `array` on your local machine, via `.env` file.
+In addition, set the `CACHE_DRIVER` [environment variable](env-vars) so that you can use `memcached` in your production App on fortrabbit and `apc` or `array` on your local machine, via `.env` file.
 
 ### Migrate & other database commands
 
@@ -236,5 +236,5 @@ Now set `FS_TYPE` in your local `.env` file and the [environment variables](/env
 
 ### Sending mail
 
-You can not use [sendmail](quirks#toc-mailing) on fortrabbit but Laravel provides a API over the popular SwiftMailer library. The mail configuration file is `app/config/mail.php`, and contains options allowing you to change your SMTP host, port, and credentials, as well as set a global from address for all messages delivered by the library.
+You can not use [sendmail](quirks#toc-mailing) on fortrabbit but Laravel provides a API over the popular SwiftMailer library. The mail configuration file is `app/config/mail.php`, and contains options allowing you to change your SMTP host, port, and credentials, as well as set a global form address for all messages delivered by the library.
 

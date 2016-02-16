@@ -196,7 +196,7 @@ Lastly enable the `xsl` PHP extension in App > PHP.
 
 ### Initialize database
 
-If you started from scratch and don't have a local database, yet, it's now time to create it:
+If you started from scratch and don't have a local database yet, it's now time to create it:
 
 ```bash
 $ php app/console --env=dev ezplatform:install clean

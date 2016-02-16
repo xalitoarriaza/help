@@ -31,7 +31,7 @@ We assume that you have: [Git installed](http://git-scm.com/) locally; your [loc
 
 ## Usage
 
-Each fortrabbit App comes with it's very own custom Git repo. Register that as a remote orgin to your local Git working copy. Then just push your code to that remotes Master branch.
+Each fortrabbit App comes with its very own custom Git repo. Register that as a remote origin to your local Git working copy. Then just push your code to that remote Master branch.
 
 
 ### Simplified deployment workflow log
@@ -86,7 +86,7 @@ Fine tune deployment configurations with the `fortrabbit.yml` deployment file: c
 
 ### Composer
 
-New Apps will always run an [Composer](composer) install after a successful `git push`. With the [Old Apps](new-apps) you can use a special formated commit message to [trigger Composer](composer) `install` or `update` on the fortrabbit remote after you pushed some code. 
+New Apps will always run an [Composer](composer) install after a successful `git push`. With the [Old Apps](new-apps) you can use a special formated commit message to [trigger Composer](composer) `install` or `update` on the fortrabbit remote after you pushed some code.
 
 
 ### Private Git/Composer repos
@@ -96,7 +96,7 @@ You can also include your own private Composer repository as described [here](pr
 
 ### Large files
 
-Don't put big binary files (>2 MB) in Git. This bloats your repository and makes everything slow. Upload them once and add them to your `.gitignore` file. Even better: Structure your contents in a way, that you can ignore whole folders containing those large files.
+Don't put big binary files (>2 MB) in Git. This bloats your repository and makes everything slow. Upload them once and add them to your `.gitignore` file. Even better: Structure your contents in a way that you can ignore whole folders containing those large files.
 
 
 ## Integrating with GitHub & Bitbucket

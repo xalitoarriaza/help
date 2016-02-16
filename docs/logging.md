@@ -42,6 +42,6 @@ $ ssh log@log.eu2.frbit.com tail app-name source:web_stderr
 $ ssh log@log.eu2.frbit.com tail app-name source:worker
 ```
 
-**Hint**: Use the `mono` flag to force monochrom output, if your console displays the colors incorrectly: `ssh log@log.eu2.frbit.com tail app-name mono`.
+**Hint**: Use the `mono` flag to force monochrome output, if your console displays the colors incorrectly: `ssh log@log.eu2.frbit.com tail app-name mono`.
 
 **Hint 2**: You can use multiple `source:name` parameters at once.

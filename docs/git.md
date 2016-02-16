@@ -11,9 +11,9 @@ seeAlsoLinks:
     - dashboard
     - app
     - terminology
-    - 
+    -
 
-tags: 
+tags:
     - beginner
 
 ---
@@ -23,7 +23,7 @@ We get support requests regarding Git usage on fortrabbit on a regular basis. Th
 
 ## Get ready for Git
 
-To use Git you need to install it locally on your development machine. And you also need should be familiar with it (commit, push, pull, …). It's not very intuitive at start, but very handy when you know it a bit better. There are many good tutorials out there in the interwebs to get started.
+To use Git you need to install it locally on your development machine. And you also should be familiar with it (commit, push, pull, …). It's not very intuitive at start, but very handy when you know it a bit better. There are many good tutorials out there in the interwebs to get started.
 
 
 ## Using Git as version control
@@ -36,7 +36,7 @@ Each [App](app) comes with a dedicated Git remote repo, it is required to use Gi
 
 ## Git is not GitHub
 
-[GitHub](https://guthub.com) is a popular provider of hosted Git repositories. Sometimes people confuse Git with GitHub. GitHub has extended Git workflows with neat communication tools around the basic Git usage. Most notable is the "pull request" workflow. The fortrabbit [Dashboard](dashboard) does not offer such project communication tools — it's barebone Git only. 
+[GitHub](https://github.com) is a popular provider of hosted Git repositories. Sometimes people confuse Git with GitHub. GitHub has extended Git workflows with neat communication tools around the basic Git usage. Most notable is the "pull request" workflow. The fortrabbit [Dashboard](dashboard) does not offer such project communication tools — it's barebone Git only.
 
 You can however build your [own workflow](bitbucket-github-and-fortrabbit) which includes a hosted Git repo on GitHub or Bitbucket (another Git repo provider).
 

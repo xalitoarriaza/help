@@ -26,11 +26,11 @@ Install
 
 This guide has been tested with Craft CMS 2.5.
 
-We assume you've already created an App with fortrabbit and that you have a local [Craft](https://craftcms.com/docs/installing) installation running. 
+We assume you've already created an App with fortrabbit and that you have a local [Craft](https://craftcms.com/docs/installing) installation running.
 
 ### Requirements
 
-Before you get started you need a local, running Craft installation. If you are starting from scratch then best use the [HappyLager Demo](https://github.com/pixelandtonic/HappyLager) and follow their install guide. If you have a running (production) installation then you need export to its data and set up a local, working "clone" with which you can proceed.
+Before you get started you need a local, running Craft installation. If you are starting from scratch then best use the [HappyLager Demo](https://github.com/pixelandtonic/HappyLager) and follow their install guide. If you have a running (production) installation then you need to export its data and set up a local, working "clone" with which you can proceed.
 
 ### Setup asset source
 
@@ -39,8 +39,8 @@ Since fortrabbit does not support a persistent storage you want to use S3 for th
 Once that's done your can create you S3 asset source:
 
 * Go to Settings > Assets
-* Click on `New asset source` to create a new `AssetSource` 
-* Give it a name and set the Type to `Amazon S3` 
+* Click on `New asset source` to create a new `AssetSource`
+* Give it a name and set the Type to `Amazon S3`
 * Enter the S3 Access Key ID and Secret Access Key click on `Refresh`
 * Select a `Bucket`
 * Enter a `Subfolder` (we prefer to put the App's name here)
@@ -66,7 +66,7 @@ Now that is done you can safely remove the empty, local asset sources:
 
 ### Migrate database
 
-Database migration is straight forward: Export the database of the local installation and import it to your fortrabbit App. You can use a [GUI](mysql#toc-mysql-guis) or the shell. From the shell you start out by [opening up a tunnel](mysql#toc-shell-tunnel-mysql) and then use `mysqldump` to export and `mysql` to import:
+Database migration is straight forward: export the database of the local installation and import it to your fortrabbit App. You can use a [GUI](mysql#toc-mysql-guis) or the shell. From the shell you start out by [opening up a tunnel](mysql#toc-shell-tunnel-mysql) and then use `mysqldump` to export and `mysql` to import:
 
 ```bash
 # on your local machine
@@ -80,7 +80,7 @@ $ mysql -h127.0.0.1 -P13306 -umy-app -p my-app < database.sql
 
 ### Configuration files
 
-Craft's native multi-environment configuration options, which allow you to define configuration options based on the domain name. This is great, but there is a potential security flaw when using Git based deployments you should be aware of: You're hard-coding the configuration details of your production environment into your code, which means you will have sensitive information in your Git version history.
+Craft's native multi-environment configuration options allow you to define configuration options based on the domain name. This is great, but there is a potential security flaw when using Git based deployments you should be aware of: you're hard-coding the configuration details of your production environment into your code, which means you will have sensitive information in your Git version history.
 
 Do not fear, that's easily solved:
 
@@ -153,7 +153,7 @@ return [
 
 #### Cache & Session
 
-If you are just testing out Craft the make sure you use tinkering PHP plan. With those you can set the cache variable (above) to `file`, `db` or `apc` during your tinkering, for example:
+If you are just testing out Craft then make sure you use tinkering PHP plan. With those you can set the cache variable (above) to `file`, `db` or `apc` during your tinkering, for example:
 
 ```
 CRAFT_CACHE=db

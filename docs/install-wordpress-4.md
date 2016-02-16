@@ -105,7 +105,7 @@ Tuning
 
 #### With Composer
 
-This is the recommend way, since it already provides a simple upgrade mechanism (Composer, of course). Following an example on how to install Akismet:
+This is the recommend way, since it already provides a simple upgrade mechanism (Composer, of course). Following is an example on how to install Akismet:
 
 ```bash
 $ composer require wpackagist-plugin/akismet
@@ -187,7 +187,7 @@ $ git commit -am "With S3"
 $ git push
 ```
 
-Once that's done, you can head over to the WordPress Admin, activate the two previously installed plugins ("Amazon Web Services" and "WP Offload S3") and then go to the settings of "WP Offload S3". Here you can choose on of your buckets. And, besides some optional fine-tuning, that's it. Any media you will upload hence will be persisted to S3.
+Once that's done, you can head over to the WordPress Admin, activate the two previously installed plugins ("Amazon Web Services" and "WP Offload S3") and then go to the settings of "WP Offload S3". Here you can choose one of your buckets. And, besides some optional fine-tuning, that's it. Any media you will upload hence will be persisted to S3.
 
 ### Sending mail
 

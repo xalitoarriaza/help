@@ -53,7 +53,7 @@ Laravel is installed into the `htdocs` [folder](directory-structure) of your App
 
 ## Environment detection
 
-Now what you need is, to differentiate between your local and the fortrabbit version of your Laravel App. The App should automagically be aware where it is currently running. 
+Now what you need is to differentiate between your local and the fortrabbit version of your Laravel App. The App should automagically be aware where it is currently running.
 
 We recommend to add an extra new environment variable for this purpose. You do this in the fortrabbit Dashboard › Your App › Settings › Env Vars › new environment variable.
 
@@ -101,7 +101,7 @@ return [
 
 ## Advanced usage
 
-Don't stop the body rock! Go ahead read the advanced topics and become a true master.
+Don't stop the body rock! Go ahead, read the advanced topics and become a true master.
 
 
 ### Using the artisan queue
@@ -145,4 +145,4 @@ With Laravel 4.1 a possible security vulnerability for certain hosting setups wa
 
 Formerly, the detection was either done by the system hostname `gethostname()` or by the server name `$_SERVER['SERVER_NAME']`. Support for the latter has been dropped since 4.1.
 
-This new environment detection does not work as you might expect and we strongly recommend to write your own detection handler based on environment variables. 
+This new environment detection does not work as you might expect and we strongly recommend to write your own detection handler based on environment variables.

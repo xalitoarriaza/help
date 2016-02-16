@@ -29,9 +29,9 @@ We recommend our [Git deployment](git) workflow to install and use Phalcon. Here
 
 ### Set Phalcon document root
 
-Phalcon uses `public` as doc root, you need change that in the fortrabbit Dashboard under for your Apps [Domains]().
+Phalcon uses `public` as doc root, you need change that in the fortrabbit Dashboard under your Apps [Domains]().
 
 ### Enable Phalcon extension
 
-As Phalcon is an C Extension, you need to enable it in the Dashboard under your Apps [PHP Extensions](php-extensions#toc-frameworks).
+As Phalcon is a C Extension, you need to enable it in the Dashboard under your Apps [PHP Extensions](php-extensions#toc-frameworks).
 
