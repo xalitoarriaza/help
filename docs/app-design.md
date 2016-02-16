@@ -31,9 +31,9 @@ If you begin developing, you might not instantly utilize a pair of multi gigabyt
 * **Database**: Normally faster than disk. A good idea if you need to cache data for a long time (i.e. weeks).
 * **APC**: All App plans include APC. Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to _Memcache_. However APC lives in local memory, which is not shared between multiple Nodes.
 * **Memcache**: Very fast, in-memory network cache.
-* **Redis**: If you want to use Redis, just sign up with an third party [redis vendor](external-services#key-value-store) (use a plan in the AWS Europe region) and let us know the port they assigned to you.
+* **Redis**: If you want to use Redis, just sign up with a third party [redis vendor](external-services#key-value-store) (use a plan in the AWS Europe region) and let us know the port they assigned to you.
 
-A high cache hit rate indicates if your caching strategy works as expected. For APC and Memcache we provide Dashboard Metrics for _APC/Memcache misses_ (that's the hit rate from another angle). The rule of thumb in production: <10% misses is okay, <2% misses is better.  
+A high cache hit rate indicates if your caching strategy works as expected. For APC and Memcache we provide Dashboard Metrics for _APC/Memcache misses_ (that's the hit rate from another angle). The rule of thumb in production: <10% misses is okay, <2% misses is better.
 
 ### Reduce I/O
 
@@ -69,7 +69,7 @@ Well, talking about database optimization could easily fill a whole book — or 
 
 ### Static file separation
 
-Sure, a request to a static file can be delivered faster than a request handled by a dynamic script - non the less, the more static requests are performed by your App, the more it has to do overall. More is more in the end. If you split up the traffic in dynamic and static requests, by utilizing a cloud hosting service, all the requests for static files are not handled by your App anymore but by another server somewhere else. Resulting, your App on fortrabbit acts as the motor for your PHP scripts, while a host dedicated to delivering static files takes care of the rest.
+Sure, a request to a static file can be delivered faster than a request handled by a dynamic script - nonetheless, the more static requests are performed by your App, the more it has to do overall. More is more in the end. If you split up the traffic in dynamic and static requests, by utilizing a cloud hosting service, all the requests for static files are not handled by your App anymore but by another server somewhere else. Resulting, your App on fortrabbit acts as the motor for your PHP scripts, while a host dedicated to delivering static files takes care of the rest.
 
 
 ### Profile your code
@@ -118,9 +118,9 @@ Don't serve the same content to the same client twice! This is especially useful
 
 ### GZIP compression with Apache
 
-GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented the on web server  — Apache in our case otherwise nginx — as a module. You can [enable and configure](quirks#toc-php-compression) it in your `.htaccess` file.
+GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can [enable and configure](quirks#toc-php-compression) it in your `.htaccess` file.
 
-It works like this: after all the HTML is rendered on the server side it get's compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly. 
+It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly.
 
 So as you can imagine: that of course saves bandwidth but also costs a little bit of CPU on both sides. It is in general recommended to use it but can cause strange effects when combined with other techniques, like caching.
 
@@ -131,18 +131,18 @@ Eat diet Cookies! Cookies are sent in the HTTP headers in every single request, 
 
 ### DNS lookups
 
-You might parallelize downloads across hostnames. This may help speed up delivery, but if the number of hostnames is too long the time that the client spends to resolve the domain can affect negatively. The concurrent connections of web browsers is limited. 
+You might parallelize downloads across hostnames. This may help speed up delivery, but if the number of hostnames is too long the time that the client spends to resolve the domain can affect negatively. The concurrent connections of web browsers is limited.
 
 
 ### Check your speed
 
-Faster websites and apps are more fun to use and are better ranked in search engines. Measure the performance of your App. Master the the web developer tools of your browser and use external services such as Google PageSpeed, YSlow and GTmetrix.
+Faster websites and apps are more fun to use and are better ranked in search engines. Measure the performance of your App. Master the web developer tools of your browser and use external services such as Google PageSpeed, YSlow and GTmetrix.
 
 
 
 ## Troubleshooting performance
 
-Ok, your App is running, but it "feels slow", you want it faster? Here are the most common mistakes and issues we've encountered.
+OK, your App is running, but it "feels slow", you want it faster? Here are the most common mistakes and issues we've encountered.
 
 ### External data sources
 
@@ -158,7 +158,7 @@ Heavily used session-files and cache-files can easily slow your App gravely down
 
 ### No cache
 
-If your App runs fast with only a few visitors it doesn't mean it can handle the load once you gain more traction. Cache, than cache some more and finally cache more. It's hard to overstate the importance and the possible speed gain of caching!
+If your App runs fast with only a few visitors it doesn't mean it can handle the load once you gain more traction. Cache, then cache some more and finally cache more. It's hard to overstate the importance and the possible speed gain of caching!
 
 ## Security design
 

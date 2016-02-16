@@ -71,6 +71,6 @@ fortrabbit is a B2B hosting solution, it's for entrepreneurs only, we expect you
 
 We recommend to enter your VAT-IN with your Billing Contact. This way you save upfront costs for VAT — reverse charge makes this possible.
 
-## Why i am charged?
+## Why am I charged?
 
-We get a few e-mails each month after invoicing. People are used to pay upfront for stuff they book online. Due to the above described fair pricing, upfront payments are not possible with fortrabbit. A fortrabbit invoice is like your old-school telephone bill, you'll get it at the start of each each month, the performance period is the last month.
+We get a few e-mails each month after invoicing. People are used to pay upfront for stuff they book online. Due to the above described fair pricing, upfront payments are not possible with fortrabbit. A fortrabbit invoice is like your old-school telephone bill, you'll get it at the start of each month, the performance period is the last month.
