@@ -68,7 +68,7 @@ You can add or remove custom App secrets in the [Dashboard](dashboard). You'll d
 
 ## Accessing App secrets
 
-Besides accessing the secrets programatically - as shown above - you can view all or a subset of them using the the command line:
+Besides accessing the secrets programatically - as shown above - you can view all or a subset of them using the command line:
 
 ```bash
 # read all secrets

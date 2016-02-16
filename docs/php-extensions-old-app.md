@@ -22,7 +22,7 @@ PHP delivers a wide range of functionality. However, something is always missing
 
 Bugs and flaws in source code are a major reason for security breaches, so keeping up-2-date with as many as possible components is essential. We subscribe to an ASAP policy of implementing security patches to protect our customers from malicious attempts to the best of our capabilities.
 
-A side effect of providing the latest stable release of all components is that they come sometimes packaged with API changes. Extensions like YAML, MCrypt or alike probably won't be the source of any trouble as they are already quite mature and integral API changes are not to be expected. However, some "younger" extensions, especially in Alpha or Beta stage, might bring core changes along with with patches for security holes.
+A side effect of providing the latest stable release of all components is that they come sometimes packaged with API changes. Extensions like YAML, MCrypt or alike probably won't be the source of any trouble as they are already quite mature and integral API changes are not to be expected. However, some "younger" extensions, especially in Alpha or Beta stage, might bring core changes along with patches for security holes.
 
 You should be aware of this and use Alpha or Beta grade extensions with caution.
 
@@ -67,7 +67,7 @@ Driver for [Redis](https://github.com/nicolasff/phpredis) key/value store.
 
 #### mongo
 
-Driver for [MongoDB](http://php.net/manual/en/book.mongo.php) databases. Please eequest [firewall white-listing](security#toc-firewalling) if you need to access an external MongoDB database with a port differing from the standard port (27011).
+Driver for [MongoDB](http://php.net/manual/en/book.mongo.php) databases. Please request [firewall white-listing](security#toc-firewalling) if you need to access an external MongoDB database with a port differing from the standard port (27011).
 
 
 
@@ -173,7 +173,7 @@ The [ImageMagick](http://php.net/manual/en/book.imagick.php) extension is a nati
 
 #### imap
 
-The [IMAP](http://php.net/manual/en/book.imap.php) extension enable you to operate with the IMAP protocol, as well as the NNTP, POP3 and local mailbox access methods.
+The [IMAP](http://php.net/manual/en/book.imap.php) extension enables you to operate with the IMAP protocol, as well as the NNTP, POP3 and local mailbox access methods.
 
 #### intl
 

@@ -16,7 +16,7 @@ tags:
 
 ## Problem
 
-Simple truth: Websites are better when faster. Generating caches, sending transactional mails, communicating with remote APIs, RSS feed reading and parsing, image processing, uploading data to external storage — don't let your users suffer.
+Simple truth: websites are better when faster. Generating caches, sending transactional mails, communicating with remote APIs, RSS feed reading and parsing, image processing, uploading data to external storage — don't let your users suffer.
 
 Consider using a background job for any web request that runs longer than 500ms — which doesn't mean you don't need to optimize your code any more.
 
@@ -30,7 +30,7 @@ Consider using a background job for any web request that runs longer than 500ms 
  -----                        *********      ************
 ```
 
-What you want is: Dedicated back-end (PHP) processes that are totally isolated from your web front-end. The Worker Node is the fortrabbit way to go:
+What you want is: dedicated back-end (PHP) processes that are totally isolated from your web front-end. The Worker Node is the fortrabbit way to go:
 
 ### Implementation
 
@@ -45,7 +45,7 @@ Our upcoming "Ephemeral Apps" are going to be different and the Worker will chan
 
 ## Usage
 
-With your own Worker Node you can execute persistently running **worker tasks** and scheduled **cron tasks**. Manage all this is with the pre-installed comand line tool the "Scheduler" in two steps:
+With your own Worker Node you can execute persistently running **worker tasks** and scheduled **cron tasks**. Manage all this is with the pre-installed command line tool the "Scheduler" in two steps:
 
 #### 1: Configure the Scheduler YAML file
 ```yml
@@ -106,7 +106,7 @@ TheName:
     shutdown:
         signal:  SIGUSR1
         timeout: 10
-    
+
     # required cron interval (if type cron)
     interval:
         minute: */5
@@ -155,7 +155,7 @@ TheName:
 
 All times are UTC! If an attribute is omitted `*` is assumed.
 
-**Additional examples:** 
+**Additional examples:**
 
 ```yml
 # Run every 5 minutes
@@ -382,9 +382,9 @@ Now you have come a long way and you know most about the fortrabbit Worker Node.
 
 ### Queues
 
-Ok, you got your worker and cron tasks running. Now you figure out that you probably need something else: A pipeline with which you can push jobs into your worker. Enter: Queues.
+Ok, you got your worker and cron tasks running. Now you figure out that you probably need something else: a pipeline with which you can push jobs into your worker. Enter: queues.
 
-Queues and worker are like bread and butter. There are [external queue providers](external-services#queues) and, of course, you can use the database - while developing. 
+Queues and worker are like bread and butter. There are [external queue providers](external-services#queues) and, of course, you can use the database - while developing.
 
 
 #### Queue example

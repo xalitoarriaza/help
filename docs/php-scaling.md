@@ -21,15 +21,15 @@ Please also see the [general scaling article](scaling), which explains concepts 
 
 ## Vertical scaling
 
-When first creating your App, you might or might not know how much memory (PHP memory limit) your application will need. The amount determines the vertical scaling plan you should choose. 
+When first creating your App, you might or might not know how much memory (PHP memory limit) your application will need. The amount determines the vertical scaling plan you should choose.
 
-We offer three main PHP scaling plan sizes: **PHP s, PHP m, PHP l**. Which of those fits your App best depends on the technology stack (framework, CMS …) and on the code you write. For the latter you should read our [application design](app-design) guide on how you can get the most performance out of your application. 
+We offer three main PHP scaling plan sizes: **PHP s, PHP m, PHP l**. Which of those fits your App best depends on the technology stack (framework, CMS …) and on the code you write. For the latter you should read our [application design](app-design) guide on how you can get the most performance out of your application.
 
 Don't be afraid to test and experiment with different scaling settings: You can instantly scale up and down to find the best match. Here are our recommendations to get started:
 
 ### PHP s: universal usage
 
-The majority of applications will run within the small vertical scaling group: 
+The majority of applications will run within the small vertical scaling group:
 
 * [Symfony](http://symfony.com/), [install guide](install-symfony)
 * [Laravel](http://laravel.com/), [install guide](install-laravel)
@@ -61,7 +61,7 @@ The majority of applications will run within the small vertical scaling group:
 
 Once you have found the perfect vertical size you usually don't need to change it. However, if your App grows strongly in terms of increasing functionality (i.e. code size) or if your code does not scale well with increasing amounts of visitors, then you might need to upgrade the vertical size.
 
-To be ready for that: Watch the memory and swap metrics in the [Dashboard](dashboard): if the memory is maxed out and you are seeing an increasing swap usage then your App needs more memory.
+To be ready for that: watch the memory and swap metrics in the [Dashboard](dashboard): if the memory is maxed out and you are seeing an increasing swap usage then your App needs more memory.
 
 In some cases swap usage by the application is not possible. In these cases you might see dreaded white-pages and along going error messages in the log: "Allowed memory size of 1234.. bytes exhausted (tried to allocate 234 bytes)." This should be understand as an urgent reminder to scale to the next vertical size.
 
@@ -70,7 +70,7 @@ In some cases swap usage by the application is not possible. In these cases you 
 
 You can scale horizontally for two reasons: 1) higher availability, 2) more visitors. While single Node Tinkering plans can handle low traffic amounts easy enough, multi Node Production plans can handle live traffic and come with considerable increased availability.
 
-If the App is mission critical, then you want to consider using plans which could handle more traffic then it is actually getting. More Nodes assure that the App keeps running without any impact even when one of the Nodes fails (although it would automatic recover, it could take some minutes).
+If the App is mission critical, then you want to consider using plans which could handle more traffic than it is actually getting. More Nodes assure that the App keeps running without any impact even when one of the Nodes fails (although it would automatic recover, it could take some minutes).
 
 
 ### PHP requests
@@ -84,11 +84,11 @@ A PHP request differs from a page-view, if:
 1. You make AJAX requests from the page which are handled by PHP scripts
 2. The loaded assets (.js, .css, ..) are "piped" through or rendered by PHP
 
-In both of those cases: One page-view generates multiple PHP requests.
+In both of those cases: one page-view generates multiple PHP requests.
 
 Now, a PHP requests to one App is different from a PHP request to another App in terms of resource usage. Say one request is to a plain PHP script which just prints "Hello world" and takes 5 ms to render, while the other is to a fat e-commerce stack, which includes hundreds of PHP files and takes 1000 ms to render.
 
-For simplification we assume an average of 500 ms rendering time per PHP request in our recommendations in the [specs](http://www.fortrabbit.com/specs) table, which is on the safe-side. If your App is faster: Great! Expect more performance. If it's slower: well, you can probably [tune your App](app-design)).
+For simplification we assume an average of 500 ms rendering time per PHP request in our recommendations in the [specs](http://www.fortrabbit.com/specs) table, which is on the safe-side. If your App is faster: great! Expect more performance. If it's slower: well, you can probably [tune your App](app-design)).
 
 
 
@@ -147,8 +147,8 @@ Now, the memory used by extensions and OPcache is shared. This means: If you run
 
 It's hard to pre-calculate the expected memory usage of your App. However, you can make educated guesses.
 
-For example, using [Slim Framework](install-slim) does require (big surprise) far less memory than using a full scale framework such as CakePHP or [Laravel](install-laravel). A form + email based mini-eshop requires far less memory than a Magento installation with plugins. 
+For example, using [Slim Framework](install-slim) does require (big surprise) far less memory than using a full scale framework such as CakePHP or [Laravel](install-laravel). A form + email based mini-eshop requires far less memory than a Magento installation with plugins.
 
 A approximation, although with exceptions, is to look at the size of the source code to guesstimate the expected memory usage. Using the same example: the source code (especially including Composer package files) of a Laravel is larger than of Slim Framework, so you can expect Laravels memory consumption to be larger and you would be right.
 
-The tricky part is the runtime data. Say you have a blog with comments using a database. Now rendering a small blog entry with no comments will utilize less memory than rendering a large blog entry with thousands of comments. Or does it? Well, it really strongly depends on your design and actual code. For example, you could load all of the thousands of comments into a PHP array and then render the site or you could load them one bye one and print them out immediately - both would have a different impact on memory. In general the memory usage will change over the lifetime of your App - expect it to increase with growing data size.
+The tricky part is the runtime data. Say you have a blog with comments using a database. Now rendering a small blog entry with no comments will utilize less memory than rendering a large blog entry with thousands of comments. Or does it? Well, it really strongly depends on your design and actual code. For example, you could load all of the thousands of comments into a PHP array and then render the site or you could load them one by one and print them out immediately - both would have a different impact on memory. In general the memory usage will change over the lifetime of your App - expect it to increase with growing data size.

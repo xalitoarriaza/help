@@ -34,7 +34,7 @@ $ git push</code></pre>
     </div>
     <div class="half">
         <h3>Composer</h3>
-<pre><code class="nohighlight">As long as a `composer.json` an `composer.lock` file is present:
+<pre><code class="nohighlight">As long as a `composer.json` and `composer.lock` files are present:
 `composer install` will be executed on each Git push.</code></pre>
     </div>
     <div class="half">
@@ -43,7 +43,7 @@ $ git push</code></pre>
 
 # called before composer
 pre:
-    
+
     # relative to ~/htdocs
     path: my-script.php
 
@@ -55,7 +55,7 @@ pre:
 
 # optional composer settings
 composer:
-    
+
     # Per default dist is prefered
     prefer-source: false
     # Resolves to the --no-plugins parameter

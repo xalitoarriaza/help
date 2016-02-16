@@ -25,7 +25,7 @@ tags:
 
 ## Problem
 
-The interwebs is full of criminals trying to read your communication. 
+The interwebs is full of criminals trying to read your communication.
 
 ## Solution
 
@@ -33,7 +33,7 @@ Encrypt the connection between your App and your users with a Transport Layer Se
 
 You already can use a piggyback `HTTPS` on your App URL. But what about your own [custom domain](domains)?
 
-The fortrabbit TLS Component enables you to establish a verified HTTPS-connection on a [custom domain](domains). The TLS Component itself needs to run seprated, that's why is a dedicated load balancer hosting your SSL/TLS certificate and that's also why we have to charge for it.
+The fortrabbit TLS Component enables you to establish a verified HTTPS-connection on a [custom domain](domains). The TLS Component itself needs to run separated, that's why there is a dedicated load balancer hosting your SSL/TLS certificate and that's also why we have to charge for it.
 
 ### TLS, SSL, HTTPS, WTF?
 
@@ -49,7 +49,7 @@ Let's be honest here. Although TLS is one of the usual business requirements, it
 3. purchase an SSL/TLS cert from an [external provider](external-services#toc-ssl-certificates)
 4. book the TLS component for your App in the Dashboard
 5. upload your key and cert(s) to the Dashboard
-5. route all your (sub)domains  to your App's hostname via CNAME
+5. route all your (sub)domains to your App's hostname via CNAME
 
 
 ### Create a new key and certificate request
@@ -87,7 +87,7 @@ openssl req -new -nodes -keyout my-app.key -out my-app.csr -newkey rsa:2048
 openssl rsa -in my-app.key -out my-app.rsa.key
 ```
 
-Do not enter a password! Also: If you plan on using `www.yourdomain.tld`, don't miss the `www.` in the "Common Name"! 
+Do not enter a password! Also: if you plan on using `www.yourdomain.tld`, don't miss the `www.` in the "Common Name"!
 
 With the now generated CSR, you can go to an external [certificate vendor](external-services#toc-ssl-certificates), which will issue a certificate for you.
 

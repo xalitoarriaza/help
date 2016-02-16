@@ -30,7 +30,7 @@ Sendmail — the Mail Transfer Agent — is not available on fortrabbit.
 
 In PHP Sendmail is usually used with the `mail()` function. Back in the good 'ol days, this would simply call the shell command `sendmail` from the shell to send a mail directly from the web server to the receiving mail server.
 
-In recent days, this is a really bad practice: Your web server can send mails, but not receive any - it is not a mail server. So it is not distinguishable from any home PC part of a bot net. Long story short: It is very likely that your mail will not be received.
+In recent days, this is a really bad practice: your web server can send mails, but not receive any - it is not a mail server. So it is not distinguishable from any home PC part of a bot net. Long story short: it is very likely that your mail will not be received.
 
 
 ### Direct SMTP
@@ -51,7 +51,7 @@ Currently only [live logs](logging) are available.
 
 ## Ephemeral storage
 
-Each App has a limited amount of local non-persistent, floating storage. During each [deployment](/deployment) this storage gets whiped. So you better not store any runtime data, like user uploads there. So it's a good idea to use a [cloud storage](articles/external-services#toc-cloud-storage) for large data sets. Please see [universal specs pages](http://www.fortrabbit.com/specs#limits) for limits. 
+Each App has a limited amount of local non-persistent, floating storage. During each [deployment](/deployment) this storage gets whipped. So you better not store any runtime data, like user uploads there. So it's a good idea to use a [cloud storage](articles/external-services#toc-cloud-storage) for large data sets. Please see [universal specs pages](http://www.fortrabbit.com/specs#limits) for limits.
 
 
 ## PHP
@@ -88,7 +88,7 @@ The PHP extension `HTTP` from PECL is enabled by default. The classes `HttpReque
 
 You can use / create as many [branches](git) as you want and push them to the fortrabbit remote repository. However there are only two branches which will be deployed: the `master` branch and a branch which has the same name as your App. If your App is named `my-app` then a branch named `my-app` will be prefered over the `master` branch.
 
-This is a feature, not a bug: Use other branches as "transport" branches to interchange code with other developers / locations without publishing it to your web space. Once your code is ready to deploy, just merge it in the master (or App-name) branch and push it.
+This is a feature, not a bug: use other branches as "transport" branches to interchange code with other developers / locations without publishing it to your web space. Once your code is ready to deploy, just merge it in the master (or App-name) branch and push it.
 
 ### Release package limit
 
@@ -106,7 +106,7 @@ With persistent connections this can take longer (possibly up to half an hour). 
 
 ## Firewalling
 
-Outgoing traffic is limited for [security](security) reasons — most ports for making outgoing calls are locked. Only the most [standard ports are white-listed](http://www.fortrabbit.com/specs#firewall). Any access to service Components provided by us directly (Memcached, MySQL, ..) is of course also allowed. Any other traffic is denied - but you can request to open ports for your App. To do so: Login to the Dashboard, browse to your App, go to the firewall settings, "request a custom white listing".
+Outgoing traffic is limited for [security](security) reasons — most ports for making outgoing calls are locked. Only the most [standard ports are white-listed](http://www.fortrabbit.com/specs#firewall). Any access to service Components provided by us directly (Memcached, MySQL, ..) is of course also allowed. Any other traffic is denied - but you can request to open ports for your App. To do so: login to the Dashboard, browse to your App, go to the firewall settings, "request a custom white listing".
 
 
 ## Outgoing IP

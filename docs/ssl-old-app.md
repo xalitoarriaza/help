@@ -28,7 +28,7 @@ Setting up SSL for your custom domain on fortrabbit is (still) a bit of a hassle
 
 ## Problem
 
-The interwebs is full of criminals trying to read your secrets. 
+The interwebs is full of criminals trying to read your secrets.
 
 ## Solution
 
@@ -36,7 +36,7 @@ Encrypt the connection between your App and your users with a Secure Socket Laye
 
 The fortrabbit SSL component enables you to establish a verified https-connection on a [custom domain](domains).
 
-The SSL component itself needs to run seprated, that's why is a dedicated load balancer hosting your SSL certificate and that's also why we have to charge for it.
+The SSL component itself needs to run separated, that's why there is a dedicated load balancer hosting your SSL certificate and that's also why we have to charge for it.
 
 
 ## Usage
@@ -87,7 +87,7 @@ openssl req -new -nodes -keyout my-app.key -out my-app.csr -newkey rsa:2048
 openssl rsa -in my-app.key -out my-app.rsa.key
 ```
 
-Do not enter a password! Also: If you plan on using `www.yourdomain.tld`, don't miss the `www.` in the "Common Name"! 
+Do not enter a password! Also: if you plan on using `www.yourdomain.tld`, don't miss the `www.` in the "Common Name"!
 
 With the now generated CSR, you can go to an external [certificate vendor](external-services#toc-ssl-certificates), which will issue a certificate for you.
 

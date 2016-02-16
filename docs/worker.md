@@ -12,7 +12,7 @@ tags:
 
 ## Problem
 
-Simple truth: Websites are better when faster. Don't let your users suffer when your App is busy: Generating caches, sending transactional mails, communicating with remote APIs, RSS feed reading and parsing, image processing, uploading data to external storage — these tasks are taking long to execute and slow down your App.
+Simple truth: websites are better when faster. Don't let your users suffer when your App is busy: generating caches, sending transactional mails, communicating with remote APIs, RSS feed reading and parsing, image processing, uploading data to external storage — these tasks are taking long to execute and slow down your App.
 
 
 ## Solution
@@ -27,7 +27,7 @@ Simple truth: Websites are better when faster. Don't let your users suffer when 
 └─────────┘                        └───────┘      └────────┘
 ```
 
-What you want is: Dedicated back-end PHP processes that are totally isolated from your web front-end. Use the Worker Component to offload those long running tasks. Background jobs are a key to resilient web applications. They transfer time and compute intensive tasks from the front-end web layer to a background process that lives outside the user request/response life-cycle.
+What you want is: dedicated back-end PHP processes that are totally isolated from your web front-end. Use the Worker Component to offload those long running tasks. Background jobs are a key to resilient web applications. They transfer time and compute intensive tasks from the front-end web layer to a background process that lives outside the user request/response life-cycle.
 
 **Rule of thumb**: Consider using a background job for any web request that runs longer than 500ms.
 
@@ -40,7 +40,7 @@ The Worker is an optional Component that can be booked and scaled from the [Apps
 * available RAM, we assume a minimum of 128 MB per job
 * number of enabled jobs
 
-In addition the CPU resources available scale linear with the amount of memory: A plan with 512 MB memory has access to four times the CPU time as a plan with 128 MB memory.
+In addition the CPU resources available scale linear with the amount of memory: a plan with 512 MB memory has access to four times the CPU time as a plan with 128 MB memory.
 
 The memory limit is for all jobs combined. The amount of configurable jobs is based on the average usage we have seen on our platform. Mind that resources needs for each application can vary largely, depending on what each particular job is doing. It is not unheard of for a single job to consume beyond 512 MB when doing extremely memory intensive tasks. In this case you need to select a plan accordingly.
 
@@ -58,14 +58,14 @@ Nonstop Jobs are continuous running PHP processes. They are meant to run forever
 
 **Example — Transforming images**: A visitor uploads an image to the web application. Instead of transforming the image directly, which would slow down the web application, because it costs lots of compute power and can take a long time, the web application creates a new task in a queue, which is very inexpensive. The running Nonstop Job then receives the task from the queue and transforms the image. Since the transformation runs in the background it does not matter (nearly as much) how long it takes - eventually it will finish and the web application stays fast and responsive.
 
-**Example — Sending e-mails**: A visitor signs up to the web application. After this the user shall receive a welcome e-mail. Since the used e-mail transport can be temporarily down, or busy and slow responding, the web application creates a new e-mail task in a queue instead. The Nonstop Job then receives the task from the queue and sends the e-mail out. If the e-mail service is currently very busy and slow it doesn't matter: the web applications stays superbly fast and responsive and the mails are send eventually from the Nonstop Job.
+**Example — Sending e-mails**: A visitor signs up to the web application. After this the user shall receive a welcome e-mail. Since the used e-mail transport can be temporarily down, or busy and slow responding, the web application creates a new e-mail task in a queue instead. The Nonstop Job then receives the task from the queue and sends the e-mail out. If the e-mail service is currently very busy and slow it doesn't matter: the web applications stays superbly fast and responsive and the mails are sent eventually from the Nonstop Job.
 
 #### Dashboard configurations
 
 * **Name**: A unique name, identifier for Dashboard, logs & statistics
 * **Command**: PHP command to be executed, for example `artisan queue:listen -v` or `path/to/my-script.php`
 * **Termination Signal**: Unix termination signal to restart job, just use default when unusure
-* **Termination Timeout**: Grace time after which the job will be "hard killed" (`SIGKILL`), if shutdown termination signal has been sents
+* **Termination Timeout**: Grace time after which the job will be "hard killed" (`SIGKILL`), if shutdown termination signal has been sent
 * **Status**: You can temporary disable jobs (start/stop)
 
 
@@ -74,9 +74,9 @@ Nonstop Jobs are continuous running PHP processes. They are meant to run forever
 
 Cron Jobs are time scheduled PHP executions. They run at defined times, independent of visits to the web application.
 
-**Example: Database maintenance**: Say the web application cumulates data which needs to be transformed and/or wiped periodically. A Cron Job allows you to make sure the `bin/console db:cleanup` - or whatever - script executes hourly, daily, weekly or whenever your want.
+**Example: Database maintenance**: say the web application cumulates data which needs to be transformed and/or wiped periodically. A Cron Job allows you to make sure the `bin/console db:cleanup` - or whatever - script executes hourly, daily, weekly or whenever your want.
 
-**Example: Cache clearing**: Say the web application has a news site, which's homepage must be rebuild every ten minutes or so. With a Cron Job you can schedule a cleanup of the homepage every one, ten, thirty or whatever minutes required.
+**Example: Cache clearing**: say the web application has a news site, which homepage must be rebuilt every ten minutes or so. With a Cron Job you can schedule a cleanup of the homepage every one, ten, thirty or whatever minutes required.
 
 #### Dashboard configurations
 
@@ -104,7 +104,7 @@ There are two ways to monitor your worker: statistics (see [below](#toc-job-stat
 
 **Swap Usage**: The amount of swapped memory your Worker jobs are causing. Any swap greater than zero indicates that you should upgrade your Worker component
 
-**Memory Usage**: The amount of memory your Worker jobs are using. Can be higher than the total sum of memory of all jobs, because it includes Linux VFS cache. Primarily interesting in terms of change over time: Is there something growing out of bounds?
+**Memory Usage**: The amount of memory your Worker jobs are using. Can be higher than the total sum of memory of all jobs, because it includes Linux VFS cache. Primarily interesting in terms of change over time: is there something growing out of bounds?
 
 **Cron Job runs**: Total amount of Cron Job executions over time.
 
@@ -147,13 +147,13 @@ Statistics about Nonstop and Cron Jobs help to estimate which Worker plan is the
 $ ssh git@deploy.eu2.frbit.com jobs your-app
 
 
- Name               │ Duration      │ Memory                │ Fails  │ Exits (OK)    │ Running         
+ Name               │ Duration      │ Memory                │ Fails  │ Exits (OK)    │ Running
 ────────────────────┼───────────────┼───────────────────────┼────────┼───────────────┼─────────────────
- a-cron             │ 5s (avg)      │ 15.1 MB (avg)         │ 2      │ 44            │ -               
-                    │ 5s (max)      │ 15.1 MB (max)         │        │               │                 
+ a-cron             │ 5s (avg)      │ 15.1 MB (avg)         │ 2      │ 44            │ -
+                    │ 5s (max)      │ 15.1 MB (max)         │        │               │
 ────────────────────┼───────────────┼───────────────────────┼────────┼───────────────┼─────────────────
- a-worker           │ -             │ 10.7 MB (avg)         │ 0      │ 0             │ true            
-                    │               │ 18.0 MB (max)         │        │               │                 
+ a-worker           │ -             │ 10.7 MB (avg)         │ 0      │ 0             │ true
+                    │               │ 18.0 MB (max)         │        │               │
 
 (Averages and max values refer to the last 24 hours)
 
@@ -228,7 +228,7 @@ while (true) {
 
 ### Do not detach
 
-If you don't know what that is: never mind. If you do know: Don't detach. To guarantee that we can monitor jobs correctly they need to run with-under the parent processes which started them. All detached processes will be killed.
+If you don't know what that is: never mind. If you do know: don't detach. To guarantee that we can monitor jobs correctly they need to run with-under the parent processes which started them. All detached processes will be killed.
 
 
 ## Alternatives to the Worker

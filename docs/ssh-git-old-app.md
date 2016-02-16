@@ -75,4 +75,4 @@ echo '<?php echo "Hello from update" ?>;' > update.php
 
 ## Multiple Git repos in one App
 
-Here you can define any folder in your App to contain a Git remote repo. In combination with the possibility to [route any domain to any folder](artciles/domains#setting-the-root-path) you can basically have: One App containing multiple projects (or websites or whatever you like to call it). 
+Here you can define any folder in your App to contain a Git remote repo. In combination with the possibility to [route any domain to any folder](artciles/domains#setting-the-root-path) you can basically have: one App containing multiple projects (or websites or whatever you like to call it).

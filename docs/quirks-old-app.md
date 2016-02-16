@@ -35,7 +35,7 @@ Sendmail — the Mail Transfer Agent — is not available on fortrabbit.
 
 In PHP Sendmail is usually used with the `mail()` function. Back in the good 'ol days, this would simply call the shell command `sendmail` from the shell to send a mail directly from the web server to the receiving mail server.
 
-In recent days, this is a really bad practice: Your web server can send mails, but not receive any - it is not a mail server. So it is not distinguishable from any home PC part of a bot net. Long story short: It is very likely that your mail will not be received.
+In recent days, this is a really bad practice: your web server can send mails, but not receive any - it is not a mail server. So it is not distinguishable from any home PC part of a bot net. Long story short: it is very likely that your mail will not be received.
 
 
 #### Direct SMTP
@@ -70,7 +70,7 @@ Swift_Preferences::getInstance()->setCharset('UTF-8');
 
 ### Storage limit
 
-The storage is limited, please see [pricing pages](http://www.fortrabbit.com/pricing) for details.. This limit cannot be adjusted. It's anyways a good idea to use a [cloud storage](articles/external-services#toc-cloud-storage) for large data sets.
+The storage is limited, please see [pricing pages](http://www.fortrabbit.com/pricing) for details. This limit cannot be adjusted. It's anyway a good idea to use a [cloud storage](articles/external-services#toc-cloud-storage) for large data sets.
 
 ## PHP
 
@@ -122,15 +122,15 @@ Create or append to an `.htaccess` file in your document root (or a subfolder, i
 
 ### Overwrite, no delete
 
-We are using a [overwrite-but-not-delete](git) deployment. This means: When you add / change a file, and deploy your commit using git push, the file will be created / modified. When you delete a file locally, remove it from your local git repository and push your changes, nothing will be deleted from your web space (however the file is deleted from the remote repository).
+We are using a [overwrite-but-not-delete](git) deployment. This means: when you add / change a file, and deploy your commit using git push, the file will be created / modified. When you delete a file locally, remove it from your local git repository and push your changes, nothing will be deleted from your web space (however the file is deleted from the remote repository).
 
 ### Only master branch
 
-You can use / create as many [branches](git) as you want and push them to the fortrabbit remote repository. However, only your master branch will be deployed. This is a feature, not a bug: Use other branches as "transport" branches to interchange code with other developers / locations without publishing it to your web space. Once your code is ready to deploy, just merge it in the master branch and push it.
+You can use / create as many [branches](git) as you want and push them to the fortrabbit remote repository. However, only your master branch will be deployed. This is a feature, not a bug: use other branches as "transport" branches to interchange code with other developers / locations without publishing it to your web space. Once your code is ready to deploy, just merge it in the master branch and push it.
 
 ### 2 MB file limit
 
-Git is very good with text files. Differences can be extracted and are stored compressed. However, Git doesn't work so good with binary files. Also Git does not forget. You cannot really delete a file, once it is in the Git history. Normally our motto is to encourage, but not enforce best-practice. However in this case, we think we would do more harm than good, if we'd allow unlimited large files. 
+Git is very good with text files. Differences can be extracted and are stored compressed. However, Git doesn't work so good with binary files. Also Git does not forget. You cannot really delete a file, once it is in the Git history. Normally our motto is to encourage, but not enforce best-practice. However in this case, we think we would do more harm than good, if we'd allow unlimited large files.
 
 If you want to manage your binary files with Git as well, we recommend to setup a dedicated repository for this and use the [SSH + Git workflow](ssh-git).
 
@@ -187,7 +187,7 @@ For [security](security) reasons, we limit outgoing traffic. Any access to servi
 
 ## Outgoing IP
 
-Apps don't have a fixed outoging IP address. This is a side effect of "the cloud", as Apps need to be capable of moving fast between nodes, due to failover, scaling or load balancing.
+Apps don't have a fixed outgoing IP address. This is a side effect of "the cloud", as Apps need to be capable of moving fast between nodes, due to failover, scaling or load balancing.
 
 As we are currently only in the AWS EU1 (Ireland) region, there is an semi-official [list of ip ranges](https://forums.aws.amazon.com/ann.jspa?annID=1701), which we are using. Depending on the use-case, it is possible to use a [HTTP](https://www.quotaguard.com/pricing#_quotaguardstatic) [proxy](http://www.vpnuk.info/dedicated-ip.html) provider, which offers a static IP.
 

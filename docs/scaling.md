@@ -23,25 +23,25 @@ One of the fortrabbit platform fundamentals is scalability – handle nearly any
 ```nohighlight
  # Vertical scaling: grow Node
  # Horizontal scaling: add Nodes
-                                                                  
+
  ┌ ─ ─ ─ ─ ─ ─ ┐ ┌ ─ ─ ─ ─ ─ ─ ┐ ┌ ─ ─ ─ ─ ─ ─ ┐ ┌ ─ ─ ─ ─ ─ ─ ┐
-                                                                
+
  │      ▲      │ │             │ │             │ │             │
-        │                                                       
+        │
  │      │      │ │             │ │             │ │             │
-        │                                                       
+        │
  │      │      │ │             │ │             │ │             │
-        │                                                       
+        │
  │      │      │ │             │ │             │ │             │
-        │                                                       
+        │
  ├──────┼──────┤ │             │ │             │ │             │
- │      │      │                                                
+ │      │      │
  │      │      │ │             │ │             │ │             │
- │      │      │                                                
+ │      │      │
  │      └──────┼─┼─────────────┼─┼─────────────┼─┼──────▶      │
- │             │                                                
+ │             │
  │             │ │             │ │             │ │             │
- │             │                                                
+ │             │
  └─────────────┘ └ ─ ─ ─ ─ ─ ─ ┘ └ ─ ─ ─ ─ ─ ─ ┘ └ ─ ─ ─ ─ ─ ─ ┘
 ```
 
@@ -49,7 +49,7 @@ A Node is a lightweight virtual container that is configured to run a specific s
 
 ### Vertical scaling
 
-Vertical scaling means that you grow your Node size. On fortrabbit this mostly means more memory, but also more [CPU power](http://fortrabbit.com/specs). Which vertical scaling size for which Component your App needs, depends in large parts on the technology you are using.
+Vertical scaling means that you grow your Node size. On fortrabbit this mostly means more memory, but also more [CPU power](http://fortrabbit.com/specs). Which vertical scaling size for which Component your App needs depends in large parts on the technology you are using.
 
 ### Horizontal scaling
 
@@ -88,14 +88,14 @@ Use for live web applications, for which performance and high availability is ke
 
 ### Dedicated
 
-For those lucky few wildly successful web applications. Dedicated private cloud resources give you more control and of course ultimate power. 
+For those lucky few wildly successful web applications. Dedicated private cloud resources give you more control and of course ultimate power.
 
 
 ### When to grow horizontally
 
 There are three common scenarios which require a scalable, elastic, environment:
 
-**Continuous growth**: Your business grows constantly. You should be able to anticipate the acceleration of the growth because you are planing for it and actively take actions to increase and guide it.
+**Continuous growth**: Your business grows constantly. You should be able to anticipate the acceleration of the growth because you are planning for it and actively take actions to increase and guide it.
 
 **Event based**: You might have an e-shop, and the Christmas sales are coming. Or you promote a festival, which is once or twice a year. Those events are strongly connected to your business and you plan on them.
 
@@ -110,7 +110,7 @@ The fortrabbit [Dashboard](/dashboard) provides you with useful metrics on how y
 
 ## How to scale
 
-That's the easiest part: Login to the [Dashboard](/dashboard), go to your App, click on the Component you want to scale and choose a new scaling. Scaling happens almost instantly and can easily be reversed. The minimum billing period of one day makes it easy to experiment with different settings. Try out a higher scaling level for a day, and you'll only be charged for one day. Scaling happens within minutes, in most cases without downtime.
+That's the easiest part: login to the [Dashboard](/dashboard), go to your App, click on the Component you want to scale and choose a new scaling. Scaling happens almost instantly and can easily be reversed. The minimum billing period of one day makes it easy to experiment with different settings. Try out a higher scaling level for a day, and you'll only be charged for one day. Scaling happens within minutes, in most cases without downtime.
 
 ## What to scale
 
@@ -131,7 +131,7 @@ All Production and Dedicated MySQL scaling are replicated. This means: they run 
 
 ### Memcache
 
-[Memcache](/memcache) is an Component which can be booked optionally. Memcache is recommended in addition to all PHP production scalings to store session data across Nodes.
+[Memcache](/memcache) is a Component which can be booked optionally. Memcache is recommended in addition to all PHP production scalings to store session data across Nodes.
 
 Production level Memcache scalings run on two Nodes. Now it depends on how you use/configure your Memcache client. You can either use both Nodes as a single, joined space, which gives you double the memory, or you can use them redundantly, which leaves you with half of that. Only the latter case will provide high availability, since it allows the failure of one of the two Nodes. See also the main [Memcache article](/memcache).
 
