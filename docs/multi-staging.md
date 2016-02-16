@@ -18,19 +18,19 @@ blogLinks:
 
 ## Goal
 
-**Move fast, break nothing.** Experimenting without downtimes. Multi staging is is quite the opposite of open heart surgery — it's an advanced strategy to run the same application in separate but similar environments. It's especially useful in teams but can also bring benefits for the one-man-army.
+**Move fast, break nothing.** Experimenting without downtimes. Multi staging is quite the opposite of open heart surgery — it's an advanced strategy to run the same application in separate but similar environments. It's especially useful in teams but can also bring benefits for the one-man-army.
 
 ### Use cases
 
 * **Feature development**: Build a new version while still being able to fix bugs in the running App without uploading all the new feature code.
 * **Purpose separation**: The backend team can break things while the frontend team can still work uninterrupted.
-* **Continuous integration**: Code needs to be tested and monitored before deployed into to the live App.
+* **Continuous integration**: Code needs to be tested and monitored before being deployed to the live App.
 
 
 ### Common set ups
 
 * **staging + production**: "Staging" is where you do your development. "Production" runs the live App. From time to time you migrate all the (stable) changes from staging into production.
-* **temporary + production**: Same as above,  it's more of a one-time-developed project. Maybe once a year their is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
+* **temporary + production**: Same as above, it's more of a one-time-developed project. Maybe once a year there is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
 * **testing + staging + production**: Code changes are made to the testing environment. Once they seem stable, they get published to the staging where they are monitored and further tested. Finally they get published to production.
 
 ### Differences to local development
@@ -44,7 +44,7 @@ Virtualization is a way to make your local environment behave more like the one 
 
 ## Multi-staging on fortrabbit
 
-The short of it: All you need to utilize multi-staging on fortrabbit is multiple Apps.
+The short of it: all you need to utilize multi-staging on fortrabbit is multiple Apps.
 
 Git supports multiple, named branches of your code. Per default, it comes with a branch called `master`. When pushing to fortrabbit our deployment will look for the `master` branch and deploy it. To make things easier for multi-staging scenarios, there is another branch, which is preferred over the `master` branch by the fortrabbit deployment: A branch named like your App. Say the name of your App is `my-app`, then you can create a branch called `my-app` which will be deployed instead of the `master` branch.
 

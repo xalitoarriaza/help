@@ -27,7 +27,7 @@ You probably don't want the whole world to see your development in progress. So 
 
 ## Solution
 
-To utilize HTTP (basic) Auth, you need to add a directive in your `.htaccess` file, forwarding the `Authorization` header as an environment variable. This variable then contains the base64 encoded authentication data, which you then can then decode to the `PHP_AUTH_USER` and `PHP_AUTH_PW`.
+To utilize HTTP (basic) Auth, you need to add a directive in your `.htaccess` file, forwarding the `Authorization` header as an environment variable. This variable then contains the base64 encoded authentication data, which you can then decode to the `PHP_AUTH_USER` and `PHP_AUTH_PW`.
 
 ### Modify .htaccess file
 

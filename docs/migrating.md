@@ -18,7 +18,7 @@ seeAlsoLinks:
 ---
 
 
-WORD: fortrabbit is not your traditional hosting environment. It may requires some tinkering on your application and we recommend reading about [the fortrabbit platform generals](app) as well as our getting started guides. 
+WORD: fortrabbit is not your traditional hosting environment. It may require some tinkering on your application and we recommend reading about [the fortrabbit platform generals](app) as well as our getting started guides.
 
 This article covers the general basics as well as some deep links for moving your App from any hosting provider to fortrabbit. This will hopefully cover everything you need to realize a smooth transition.
 

@@ -41,14 +41,14 @@ The deployment file version configuration is mandatory.
 
 ### Composer integration
 
-Besides the optional Git [commit message](composer#toc-trigger-composer-as-a-hook) trigger, you can control when and how Composer is called using the deployment file. First you need to decide on the `method`, which can either be `install` or `update`. Then you can decide on on the `mode`, which can be either `trigger` or `always`. Our recommended setup is to set the method to `install` and the mode to `always` or `trigger`. This way you can be sure that your `composer.lock` is always considered.
+Besides the optional Git [commit message](composer#toc-trigger-composer-as-a-hook) trigger, you can control when and how Composer is called using the deployment file. First you need to decide on the `method`, which can either be `install` or `update`. Then you can decide on the `mode`, which can be either `trigger` or `always`. Our recommended setup is to set the method to `install` and the mode to `always` or `trigger`. This way you can be sure that your `composer.lock` is always considered.
 
 #### Run composer install on each push
 
 ```yml
 version: 1
 composer:
-    
+
     # composer should use update
     method: install
 
@@ -257,7 +257,7 @@ post-deploy:
     script: multiple.php
 ```
 
-Create a directory `post-deploy` in `htdocs` and insert here all the scripts you need. 
+Create a directory `post-deploy` in `htdocs` and insert here all the scripts you need.
 
 
 ##### multi.php example
@@ -340,7 +340,7 @@ cd my-app/
 
 # Simulate the sync
 rsync -e ssh -rlcv --dry-run --exclude=.git/ --exclude=app/storage/ --exclude=uploads/ \
-    --exclude=vendor/ --delete-after ./ u-my-app@ssh1.eu1.frbit.com:~/htdocs/ 
+    --exclude=vendor/ --delete-after ./ u-my-app@ssh1.eu1.frbit.com:~/htdocs/
 ```
 
 

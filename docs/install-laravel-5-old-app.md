@@ -54,7 +54,7 @@ Application key [asdasdasdasd] set successfully.
 Document root configuration
 ---------------------------
 
-While the above project is locally created, you should change the document root of your App. In the Dashboard you can configure the App to [route all requests](domains#toc-set-a-custom-root-path) to Laravels `public` folder, which Laravel requires.
+While the above project is locally created, you should change the document root of your App. In the Dashboard you can configure the App to [route all requests](domains#toc-set-a-custom-root-path) to Laravel's `public` folder, which Laravel requires.
 
 Initialize the Git repository
 -----------------------------
@@ -67,7 +67,7 @@ git init .
 git remote add origin git@eu1.frbit.com:my-app.git
 ```
 
-Since the Laravel comes with a good `.gitignore` file you can now safely add all files and create an initial commit with the [fortrabbit composer trigger](#..). Once that's don just push to deploy.
+Since the Laravel comes with a good `.gitignore` file you can now safely add all files and create an initial commit with the [fortrabbit composer trigger](#..). Once that's done, just push to deploy.
 
 ``` bash
 git add -A

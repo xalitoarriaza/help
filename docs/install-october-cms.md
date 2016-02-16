@@ -165,7 +165,7 @@ return [
 
 Since fortrabbit does not support a persistent storage you want to use S3 for that. If you don't have an AWS account or no S3 bucket handy just follow [our quick guide](http://blog.fortrabbit.com/new-app-cloud-storage-s3) and you'll have a bucket ready within a few minutes.
 
-October comes already with Flysystem support. Flysystem abstracts the filesystem layer nicely and llows you to simply switch out the concrete adapter. Continue by installing the AWS S3 adapter:
+October comes already with Flysystem support. Flysystem abstracts the filesystem layer nicely and allows you to simply switch out the concrete adapter. Continue by installing the AWS S3 adapter:
 
 ```bash
 $ composer require league/flysystem-aws-s3-v2
@@ -304,7 +304,7 @@ $ git commit -m 'Plugin installed'
 $ git push
 ```
 
-Once that's done login to your October backend and configure your plugin as usual..
+Once that's done login to your October backend and configure your plugin as usual.
 
 ### Scheduled jobs
 

@@ -23,7 +23,7 @@ tags:
 
 ---
 
-We all love it, we all hate it: our good ol' friend WordPress. 
+We all love it, we all hate it: our good ol' friend WordPress.
 
 ### Problem
 
@@ -33,7 +33,7 @@ WordPress — at least up until version 4 — is not designed to be very compati
 ### Solutions
 
 Sorry, there is not one thing that can be one to fix everything.
-Wait! (https://github.com/roots/bedrock) looks promising,  but we havn't tried it yet.
+Wait! (https://github.com/roots/bedrock) looks promising,  but we haven't tried it yet.
 
 
 #### Just use SFTP
@@ -50,6 +50,6 @@ In any case of using WordPress with Git, exclude the runtime data, put `wp-conte
 
 #### WordPress web updates
 
-WordPress can update itself on the remote server alone. That feature is quite nice, because it helps people a lot to keep their WordPress up-to-date — which is important for [security](security) concerns. 
+WordPress can update itself on the remote server alone. That feature is quite nice, because it helps people a lot to keep their WordPress up-to-date — which is important for [security](security) concerns.
 
 That very feature can also turn into a nightmare when you are trying to keep your local version and the production one in sync. WordPress updates include database updates. That means the updater script actually needs to run to change the database — so you can't just push the new files up to the remote.

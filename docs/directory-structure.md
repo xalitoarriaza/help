@@ -53,8 +53,8 @@ The default web root (aka document root) of your App. Directory that forms the m
 
 Temporary folder; limited to 2GB of storage. Files older than 15 days will be automatically purged. Typical use cases are the default PHP session file folder or a temp destination for file uploads via PHP (before `move_uploaded_file()` is called).
 
-For multi node plans: The `tmp` folder is not shared. Meanging that each node has "their own" temporary folder.
+For multi node plans: The `tmp` folder is not shared. Meaning that each node has "their own" temporary folder.
 
 ## Other folders
 
-The rest of the folders (and files which are not shown here) are part of the standard Linux distribution. All this stuff is handled by us for you. So you don't have access privileges. You can't change things outside the above outlined context. 
+The rest of the folders (and files which are not shown here) are part of the standard Linux distribution. All this stuff is handled by us for you. So you don't have access privileges. You can't change things outside the above outlined context.

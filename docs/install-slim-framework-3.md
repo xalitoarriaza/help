@@ -15,7 +15,7 @@ seeAlsoLinks:
 ---
 
 
-[Slim framework](http://www.slimframework.com/) is extremly easy to setup thanks to our Composer support. We assume you've already created an [App](app) with fortrabbit. You also need a local Slim framework installation. You can either use an existing or a new one. This guide explains you how to start locally from scratch:
+[Slim framework](http://www.slimframework.com/) is extremely easy to setup thanks to our Composer support. We assume you've already created an [App](app) with fortrabbit. You also need a local Slim framework installation. You can either use an existing or a new one. This guide explains you how to start locally from scratch:
 
 ```bash
 # change into your projects directory

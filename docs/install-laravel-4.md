@@ -15,14 +15,14 @@ tags:
 Install
 -------
 
-We assume you've already created a New App with fortrabbit. You also need a local [Laravel](http://laravel.com/docs/4.2/installation) installation. You can either use an existing one or intialize a new one. For a new one execute locally:
+We assume you've already created a New App with fortrabbit. You also need a local [Laravel](http://laravel.com/docs/4.2/installation) installation. You can either use an existing one or initialize a new one. For a new one execute locally:
 
 ```bash
 $ cd ~/Projects
 $ composer create-project laravel/laravel --prefer-dist MyApp 4.2
 ```
 
-In any case: Change into your local app directory, make sure it is initialized as a Git repo and add your fortrabbit App remote:
+In any case: change into your local app directory, make sure it is initialized as a Git repo and add your fortrabbit App remote:
 
 ```bash
 $ cd ~/Projects/MyApp
@@ -64,7 +64,7 @@ When the push is done you can visit your App URL in the browser and see the Lara
 Tuning
 ------
 
-The above will give you an up an running App. However, to make the most of Laravel on fortabbit, it needs some tuning.
+The above will give you an up and running App. However, to make the most of Laravel on fortabbit, it needs some tuning.
 
 ### Environment detection
 
@@ -84,7 +84,7 @@ $env = $app->detectEnvironment(function() {
 
 ### Logging
 
-Per default Laravel writes all logs to `app/storage/log/..`. Since you don't have direct file access, you need to configure Laravel to write to the PHP `error_log` method instead. That's easily done: Open `boostrap/start.php` and add the following just before the `return $app` statement at the bottom:
+Per default Laravel writes all logs to `app/storage/log/..`. Since you don't have direct file access, you need to configure Laravel to write to the PHP `error_log` method instead. That's easily done: open `boostrap/start.php` and add the following just before the `return $app` statement at the bottom:
 
 ```php
 if ($env == 'production') {

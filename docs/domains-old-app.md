@@ -22,7 +22,7 @@ seeAlsoLinks:
 
 ---
 
-Each fortrabbit App has it's own, unique App URL. Additionally you can route any external domain to your App. Learn all about DNS and domains settings on fortrabbit.
+Each fortrabbit App has its own, unique App URL. Additionally you can route any external domain to your App. Learn all about DNS and domains settings on fortrabbit.
 
 
 **MIND**: fortrabbit is not offering direct domain ordering like in classical hosting. You have to register your domain elsewhere. Take care that your external domain [DNS](external-services#toc-dns-as-a-service) or [registration](external-services#toc-domain-registration) service supports forwards (ALIAS or ANAME records).
@@ -52,7 +52,7 @@ Normally all domains of the App will route to the `~/htdocs` [folder](directory-
 
 You can do this by writing the relative path to the sub-folder (all folders below the htdocs folder are allowed) in the Root Path field right to the domain URL.
 
-For example, if you want to use the folder `~/htdocs/web`, just enter web in the input. If you want to use the folder `~/htdocs/app/webbroot`, just enter `app/webroot`. 
+For example, if you want to use the folder `~/htdocs/web`, just enter web in the input. If you want to use the folder `~/htdocs/app/webbroot`, just enter `app/webroot`.
 
 ## Change the default domain
 
@@ -60,13 +60,13 @@ This is an optional setting. Per default your App URL is the default domain. In 
 
 ## Advanced routing alternatives
 
-The world of DNS is one of it's own. Let's dive into it so you can understand the backgrounds and explore alternative settings.
+The world of DNS is one of its own. Let's dive into it so you can understand the backgrounds and explore alternative settings.
 
 ### Non naked domain
 
 `www.fortrabbit.com` — Although this looks a bit antiquated, it's the modern "cloud enabled" way to go.
 
-Back in the days the www. prefix indicated that's the address to type in the browser. Nowadays the www. prefix indicates i am ready to move this App in seconds to another server location. Test it: all big players run on a www. subdomain. The name of the subdomain prefix is not so important, but `www` is the convention for (marketing) entry points.
+Back in the days the www. prefix indicated that's the address to type in the browser. Nowadays the www. prefix indicates I am ready to move this App in seconds to another server location. Test it: all big players run on a www. subdomain. The name of the subdomain prefix is not so important, but `www` is the convention for (marketing) entry points.
 
 Non naked domains are usually routed thru CNAME records.
 
@@ -78,11 +78,11 @@ Non naked domains are usually routed thru CNAME records.
 
 It is possible to create a CNAME record for a naked domain. The problem is that `CNAME` records do not behave like the other records (`A`, `MX`, `TXT`, …). They are *greedy*. This means: They *overwrite* all other records.
 
-An example: Assume you have a domain `domain.tld` and want to receive mails for it. So you create an `MX` record. Say it points to `mail.domain.tld`. If you now would create a `CNAME` record directly for `domain.tld` pointing to `otherdomain.tld`, every lookup of any record for `domain.tld` will be made on `otherdomain.tld` instead (aside from the `CNAME` record itself).
+An example: assume you have a domain `domain.tld` and want to receive mails for it. So you create an `MX` record. Say it points to `mail.domain.tld`. If you now would create a `CNAME` record directly for `domain.tld` pointing to `otherdomain.tld`, every lookup of any record for `domain.tld` will be made on `otherdomain.tld` instead (aside from the `CNAME` record itself).
 
 #### Solution 1: Use ANAME/ALIAS provider
 
-There are DNS providers, which allow you to use non-standard records, which they call `ANAME` or `ALIAS`. Those combine the *positive* attributes of `CNAME`  with `A` records. In short: You can route a naked domain to a hostname without loosing your `MX` records.
+There are DNS providers, which allow you to use non-standard records, which they call `ANAME` or `ALIAS`. Those combine the *positive* attributes of `CNAME`  with `A` records. In short: you can route a naked domain to a hostname without loosing your `MX` records.
 
 Here is a [list of providers](/external-services#toc-dns-as-a-service).
 
@@ -116,7 +116,7 @@ host my-app.eu1.frbit.net
 
 ### Wildcards
 
-You probably want to route all requests for subdomains to your fortrabbit App like so: `*.mydomain.com` — for instance when the users of your App create spaces within in your domain name. That's it is possible, but for security reasons we'll need to verify your request. Also after you have a setup a wildcard for a domain, all other new requests for custom routings for this domain also need to be verified.
+You probably want to route all requests for subdomains to your fortrabbit App like so: `*.mydomain.com` — for instance when the users of your App create spaces within your domain name. That's possible, but for security reasons we'll need to verify your request. Also after you have a setup a wildcard for a domain, all other new requests for custom routings for this domain also need to be verified.
 
 ### HTTPS
 

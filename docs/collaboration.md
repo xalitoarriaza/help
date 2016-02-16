@@ -3,7 +3,7 @@
 template:    article
 title:       Teamwork on fortrabbit
 naviTitle:   Collaboration
-lead:        Mapping real world team relationships in a hosting env. 
+lead:        Mapping real world team relationships in a hosting env.
 
 tags:
     - beginner
@@ -26,13 +26,13 @@ keywords:
 
 > Code is better when shared.
 
-This is definitely not the sexy feature which get's you hooked immediately. It's not even technical, it's more like philosophy. But it's what you won't miss and will love once you got to know it. See the fortrabbit collaboration features here.
+This is definitely not the sexy feature which gets you hooked immediately. It's not even technical, it's more like philosophy. But it's what you won't miss and will love once you got to know it. See the fortrabbit collaboration features here.
 
 ## Problem
 
 Most of our clients run multiple Apps on fortrabbit. But here is the thing: Life is complicated and professional life even more so. Say we have _App X_, which was once part of _Project A_ but is now not anymore. And actually you don't want to pay it, but your client _Acme Inc_ should. And not to mention: _Kevin Flynn_, the guy your client hired for code review, also should have code access.
 
-Well, you just could set up a new Account for each App and be done with it. But the more Apps you have, the more of a mess you will end up with: no birds eys view about what is going on, logout/login to switch to another App, manage all kind of stuff twice, ...
+Well, you just could set up a new Account for each App and be done with it. But the more Apps you have, the more of a mess you will end up with: no bird's eye view about what is going on, logout/login to switch to another App, manage all kind of stuff twice, ...
 
 ## Solution
 
@@ -51,7 +51,7 @@ Each User can be part or own multiple Companies on fortrabbit. That is useful fo
 
 ## User roles
 
-It also works around the other way, not only you can take part in multiple Companies, each Company can have multiple Users associated with it. 
+It also works around the other way, not only you can take part in multiple Companies, each Company can have multiple Users associated with it.
 
 »Everyone is equal, but some are more equal than others.« That's what permission based roles are for. That's the way we make sure only the boss can really mess up.
 
@@ -92,7 +92,7 @@ Sometimes you have different billing preferences within one Company. That's what
 * A billing address
 * A billing e-mail address
 
-Each App (expect trials) has to be associated with a Billing Contact. Each Billing Contact has it's own invoice archive.
+Each App (expect trials) has to be associated with a Billing Contact. Each Billing Contact has its own invoice archive.
 
 
 ## How to use it

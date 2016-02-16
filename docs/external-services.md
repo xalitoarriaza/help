@@ -25,7 +25,7 @@ There is not a common yes or no about using a cloud service. Often it's a trade 
 
 <!-- TODO: rewrite on US launch  -->
 
-For latency-relevant services (databases, caches), we recommend to use a service hosted in Europe, even better in the Europe region of AWS. We don't have any business relations or interests going on here and we don't have expereinces with all of the services listed. fortrabbit is PHP as a Service, there are certain things we don't do by design, so for some tasks that are part of classical hosting you might need an external service now.
+For latency-relevant services (databases, caches), we recommend to use a service hosted in Europe, even better in the Europe region of AWS. We don't have any business relations or interests going on here and we don't have experiences with all of the services listed. fortrabbit is PHP as a Service, there are certain things we don't do by design, so for some tasks that are part of classical hosting you might need an external service now.
 
 Things are changing quickly in this space, categories blend, some providers invent their own or have offerings in multiple categories.
 
@@ -45,18 +45,18 @@ Sometimes there is an App for that: key-value stores, site search, Redis, Apache
 fortrabbit offers [MySQL](mysql) out of the box. But there are other interesting database types out there. With database abstraction as part of your framework you actually can switch quickly to an alternative. NoSQL databases are quite popular. Commonly used DBaas:
 
 * [ElephantSQL](http://www.elephantsql.com) PostgreSQL Databases in AWS Europe
-* [Cloudant](https://cloudant.com) CouchDB 
+* [Cloudant](https://cloudant.com) CouchDB
 * [MongoLab](https://mongolab.com) MongoDB
 * [Compose.io](https://www.compose.io) MongoDB, Elasticsearch & RethinkDB
 
 
 ## Transactional mails
 
-Ok, you want send your "forgotten passsword link mail" from your App without fuzz. Transactional mails are automated customer relationship messages send by your App. In contrast to newsletters transactional mails are triggered by user action. It's where marketing meets communications. 
+OK, you want send your "forgotten passsword link mail" from your App without fuzz. Transactional mails are automated customer relationship messages send by your App. In contrast to newsletters transactional mails are triggered by user action. It's where marketing meets communications.
 
 With fortrabbit you can't use `sendmail` out of the box, so you either use SMTP in combination with a classical mail provider or a specialized provider. They usually offer an API or simply [SMTP](quirks#toc-mailing):
 
-* [Postmark](https://postmarkapp.com) 
+* [Postmark](https://postmarkapp.com)
 * [Sendgrid](http://sendgrid.com)
 * [Mailjet](https://www.mailjet.com)
 * [Mandrill](https://www.mandrill.com)
@@ -64,7 +64,7 @@ With fortrabbit you can't use `sendmail` out of the box, so you either use SMTP 
 
 ## Cloud storage
 
-Ok, this not about iCloud, DropBox or Google Drive here. You don't want to put your large binaries (like for download files) in Git? Good idea! You want to put your generated and compressed static assets like images, javascripts and stylesheets somewhere else? Good idea!
+OK, this not about iCloud, DropBox or Google Drive here. You don't want to put your large binaries (like for download files) in Git? Good idea! You want to put your generated and compressed static assets like images, javascripts and stylesheets somewhere else? Good idea!
 
 * [Cloud Files](http://www.rackspace.com/cloud/files)
 * [DreamObjects](https://www.dreamhost.com//cloud/dreamobjects)
@@ -74,7 +74,7 @@ Ok, this not about iCloud, DropBox or Google Drive here. You don't want to put y
 
 ## Message queuing
 
-Ok, you want to make real good use of your [Worker Node](workers) with fortrabbit? Combine it with a queue service:
+OK, you want to make real good use of your [Worker Node](workers) with fortrabbit? Combine it with a queue service:
 
 * [Iron MQ](http://www.iron.io/mq)
 * [CloudAMPQ](http://www.cloudamqp.com)
@@ -82,7 +82,7 @@ Ok, you want to make real good use of your [Worker Node](workers) with fortrabbi
 
 ## Uptime monitoring
 
-Ok, you want to know if fortrabbit is really up and delivering as promised in the Service Level Agreement? Go ahead, ping your App constantly: 
+OK, you want to know if fortrabbit is really up and delivering as promised in the Service Level Agreement? Go ahead, ping your App constantly:
 
 * [PingDom](https://www.pingdom.com)
 * [StatusCake](https://www.statuscake.com)
@@ -91,7 +91,7 @@ Ok, you want to know if fortrabbit is really up and delivering as promised in th
 
 ## Performance monitoring
 
-Ok, you care about App performance, mostly of your server side scripts? You need to know what is slowing and where your bottle necks are? The first thing is to get some data in.
+OK, you care about App performance, mostly of your server side scripts? You need to know what is slowing and where your bottle necks are? The first thing is to get some data in.
 
 We have a special [New Relic integration](new-relic).
 
@@ -105,7 +105,7 @@ Apart from open source solutions like Xdebug or Zend Debugger there are commerci
 
 ## Code collaboration
 
-Ok, each fortrabbit App has [Git](git) built in. Git itself is a very powerful tool to collaborate on code with others. GitHub is the poster-child Git platform — enhanced Git hosting, making repos explorable and accessible (pull requests, issues, stats, activity log …).  With Git standards alone you can combine fortrabbit and nearly any other code collaboration tool:
+OK, each fortrabbit App has [Git](git) built in. Git itself is a very powerful tool to collaborate on code with others. GitHub is the poster-child Git platform — enhanced Git hosting, making repos explorable and accessible (pull requests, issues, stats, activity log …).  With Git standards alone you can combine fortrabbit and nearly any other code collaboration tool:
 
 * [GitHub](https://github.com)
 * [Bitbucket](https://bitbucket.org)
@@ -123,7 +123,7 @@ Please also see the [dedicated article about GitHub/Bitbucket integration](bitbu
 
 ## Continuous Integration
 
-Ok, Git push is all fine. But sometimes you might want to run a test or two before everything get's deployed into production. We care about [Continuous Integration](continuous-integration). You might try one of those CI services:
+OK, Git push is all fine. But sometimes you might want to run a test or two before everything gets deployed into production. We care about [Continuous Integration](continuous-integration). You might try one of those CI services:
 
 * [Codeship](https://www.codeship.io)
 * [Codeclimate](https://codeclimate.com)
@@ -133,7 +133,7 @@ Ok, Git push is all fine. But sometimes you might want to run a test or two befo
 
 ## Crons
 
-Ok, you want weekly status reports, daily cache cleanups or monthly invoice generations? Cron tasks, or short crons, come in handy if you want to execute a task on a specific, reoccurring time. 
+OK, you want weekly status reports, daily cache cleanups or monthly invoice generations? Cron tasks, or short crons, come in handy if you want to execute a task on a specific, reoccurring time.
 
 fortrabbit offers a great [worker & cron](workers) solution, but sometimes this solution might be a bit over-sized to execute a small cron script from time to time. You might use an external service to time your execution of scripts hosted on fortrabbit. Go ahead, but be warned: Cronjob as a Service providers look a mostly antiquated. The good news is that there are free offerings:
 
@@ -144,7 +144,7 @@ fortrabbit offers a great [worker & cron](workers) solution, but sometimes this 
 
 ## SSL certificates
 
-Ok, you want to utilize transfer encryption for your custom domain. On the one hand you'll need the fortrabbit [TLS component](tls), on the other hand you need a service willing to sign your certificate, such as:
+OK, you want to utilize transfer encryption for your custom domain. On the one hand you'll need the fortrabbit [TLS component](tls), on the other hand you need a service willing to sign your certificate, such as:
 
 * [Digicert](https://www.digicert.com)
 * [SSLstore](https://www.thesslstore.com)
@@ -155,12 +155,12 @@ Ok, you want to utilize transfer encryption for your custom domain. On the one h
 * [GeoTrust](http://www.geotrust.com)
 * [Let's encrypt](https://letsencrypt.org/) < a free alternative
 
-AGREE: All those commercial vendors look don't look trustfully. Well, that seems to be part of the shady business they are doing.
+AGREE: All those commercial vendors don't look trustfully. Well, that seems to be part of the shady business they are doing.
 
 
 ## Domain registration
 
-Ok, you want to register your domain somewhere.
+OK, you want to register your domain somewhere.
 
 * [iwantmyname](https://iwantmyname.com/)
 * [Hover](https://www.hover.com/)
@@ -170,7 +170,7 @@ Ok, you want to register your domain somewhere.
 
 ## DNS as a Service
 
-Ok, you have your own domains registered somewhere already. But that service doesn't support CNAME entries or forwards like ALIAS or ANAME? You can use a Domain Name System service to do this:
+OK, you have your own domains registered somewhere already. But that service doesn't support CNAME entries or forwards like ALIAS or ANAME? You can use a Domain Name System service to do this:
 
 * [DNS Made Easy](http://www.dnsmadeeasy.com)
 * [DNSimple](https://dnsimple.com) — also offering SSL
@@ -179,7 +179,7 @@ Ok, you have your own domains registered somewhere already. But that service doe
 
 ## CDN
 
-Ok, you want your static assets to be near your clients for better performance? Try a Content Delivery Network:
+OK, you want your static assets to be near your clients for better performance? Try a Content Delivery Network:
 
 * [Cloudflare](https://www.cloudflare.com) — also offering SSL now
 * [MaxCDN](https://www.maxcdn.com)
@@ -188,7 +188,7 @@ Ok, you want your static assets to be near your clients for better performance? 
 
 ## Payment processing
 
-Ok, you are collecting payments form your users, possibly via credit card. Of course you will not store any data in your fortrabbit App. There is payment service providers:
+OK, you are collecting payments from your users, possibly via credit card. Of course you will not store any data in your fortrabbit App. There is payment service providers:
 
 * [Stripe](https://stripe.com)
 * [WireCard](http://www.wirecard.com/)
@@ -197,7 +197,7 @@ Ok, you are collecting payments form your users, possibly via credit card. Of co
 
 ## Other sources
 
-Ok, don't take only our word. Load testing, browser testing, video processing, payment processing, metrics, code collaboration, deployment helpers there is much more out there. Have a look around:
+OK, don't take only our word. Load testing, browser testing, video processing, payment processing, metrics, code collaboration, deployment helpers there is much more out there. Have a look around:
 
 * [Developer facing services](https://docs.google.com/spreadsheet/ccc?key=0An6rx68cKNFNdDNYdFdSSTNzZXl5eGRSY0ZxSW10aHc) — an open google spreadsheet
 * [Leanstack.io](http://leanstack.io) — developer tools database & platform

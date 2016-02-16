@@ -25,14 +25,14 @@ No need to explain this anymore: [Composer](http://getcomposer.org) is the defac
 
 ## Usage
 
-On fortrabbit you [(of course) exclude](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md) the vendor folder from Git. This directory is created by Composer within in your project locally and contains all the modules you are using. This way only your own code — not the dependencies — is included into Git. During deployment Composer runs on the remote Node of your App as well. 
+On fortrabbit you [(of course) exclude](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md) the vendor folder from Git. This directory is created by Composer within in your project locally and contains all the modules you are using. This way only your own code — not the dependencies — is included into Git. During deployment Composer runs on the remote Node of your App as well.
 
 For [Old Apps](new-apps) you can trigger Composer with a special keyword in your commit message. For [New Apps](new-apps) Composer will always run.
 
 
 ### Composer via the deployment file
 
-You can fine tune your deployment behavior and aspects of Composer in the deployment file. [V1 for Old Apps](/deployment-file-v1-old-app), 
+You can fine tune your deployment behavior and aspects of Composer in the deployment file. [V1 for Old Apps](/deployment-file-v1-old-app),
 
 ### Composer hook trigger (only Old Apps)
 
@@ -53,9 +53,9 @@ In production Apps, you should always use Composer's `install` mode. The differe
 * `install` looks in your `composer.lock` file and installs the exact versions it finds there. You can trigger it with `[trigger:composer:install]`.
 * `update` checks out the `composer.json` file and applies the version patterns you've provided. You can trigger it with `[trigger:composer:update]`.
 
-In essence: If you use `install` then you can be sure that your (last) locally installed package versions are matching exactly with the ones in your (fortrabbit) production environment. With `update` the package versions can diverge and lead to those nasty "but it works on my machine" bugs everybody loves so much. So if you are not sure: Stick with `install`.
+In essence: If you use `install` then you can be sure that your (last) locally installed package versions are matching exactly with the ones in your (fortrabbit) production environment. With `update` the package versions can diverge and lead to those nasty "but it works on my machine" bugs everybody loves so much. So if you are not sure: stick with `install`.
 
-We also support a third, legacy mode, which can be triggered by `[trigger:composer]`. It's checks whether the `vendor` folder exits and uses `update` mode if so and `install` mode if not. **We don't recommend it anymore**.
+We also support a third, legacy mode, which can be triggered by `[trigger:composer]`. It checks whether the `vendor` folder exists and uses `update` mode if so and `install` mode if not. **We don't recommend it anymore**.
 
 ### Run the hook without code commit
 

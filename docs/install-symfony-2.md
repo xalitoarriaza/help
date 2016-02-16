@@ -14,7 +14,7 @@ tags:
 
 ## Install
 
-We assume you've already created a New App with fortrabbit. You also need a local Symfony installation. You can either use an existing one or intialize a new one. We further assume you want to use the environment `prod`.
+We assume you've already created a New App with fortrabbit. You also need a local Symfony installation. You can either use an existing one or initialize a new one. We further assume you want to use the environment `prod`.
 
 For a new installation execute the following locally:
 
@@ -53,7 +53,7 @@ When the push is done you can visit your App URL in the browser and see the Symf
 
 ## Tuning
 
-The above will give you an up an runnign App. However, to make the most of Symfony on fortabbit, it needs some tuning.
+The above will give you an up and runnign App. However, to make the most of Symfony on fortabbit, it needs some tuning.
 
 ### Use app_dev.php
 
@@ -141,7 +141,7 @@ If you require a persistent storage, for uploaded media for example, you can use
 * [Gaufrette Symfony bundle](https://github.com/KnpLabs/KnpGaufretteBundle)
 * [Flysystem Symfony bundle](https://github.com/1up-lab/OneupFlysystemBundle)
 
-Both are well documented. In essence, you should configure your filesystem abstraction so that you use the cloud storage adapter in your prod environemnt (on fortrabbit) and locally, well, a local adapter.
+Both are well documented. In essence, you should configure your filesystem abstraction so that you use the cloud storage adapter in your prod environment (on fortrabbit) and locally, well, a local adapter.
 
 ### Memcache sessions
 

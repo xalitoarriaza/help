@@ -28,7 +28,7 @@ tags:
 ---
 
 
-In the following example you'll learn how to use the elementary [Git push](git) to deploy method here on fortrabbit. We assume that you are a bit familiar with the shell, have a [fortrabbit Dashboard](dashboard) Account, already created an [App](app), are aware your Apps Git remote address. The following code get's executed on your local machine:
+In the following example you'll learn how to use the elementary [Git push](git) to deploy method here on fortrabbit. We assume that you are a bit familiar with the shell, have a [fortrabbit Dashboard](dashboard) Account, already created an [App](app), are aware your Apps Git remote address. The following code gets executed on your local machine:
 
 ```bash
 # Clone the repo from fortrabbit
@@ -53,7 +53,7 @@ $ git add index.php
 # Commit the staged snapshot to the project history
 $ git commit -am 'initial commit'
 
-# La grand finale
+# Le grand final
 # Just push to deploy
 $ git push -u origin master
 Counting objects: 3, done.

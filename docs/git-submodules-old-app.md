@@ -40,7 +40,7 @@ As you should not use your "regular" SSH key (the one you have used in the Dashb
 
 ### Init the git repo on SSH
 
-You need a Git repository to work with Git submodules. 
+You need a Git repository to work with Git submodules.
 
 Our [Git deployment](git) does not create a Git repository in your `~/htdocs` folder and does not care whether one exists (i.e. will not delete it later on). However, you do not need to add anything to the newly created Git repository but the `.gitmodules` file!
 
@@ -66,7 +66,7 @@ If you've uploaded your code via SSH, you've probably copied the submodules cont
     url = git@otherrepo.tld:other-sub.git
 ```
 
-Now is a good time to do a backup, the continue like this:
+Now is a good time to do a backup, then continue like this:
 
 ```bash
 # clear the submodule directories

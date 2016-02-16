@@ -32,7 +32,7 @@ So, you want to use continuous integration? Deploy only if your tests succeed? T
 
 ## Problem
 
-Your App is a complex monster: dependencies and lot's of things that can go wrong. You change something here which breaks something over there. You maybe have some tests in place, but there is no workflow to run all of your tests frequently.
+Your App is a complex monster: dependencies and lots of things that can go wrong. You change something here which breaks something over there. You maybe have some tests in place, but there is no workflow to run all of your tests frequently.
 
 ## Solution
 
@@ -43,23 +43,23 @@ Continuous Integration to the rescue — first making things even more complicat
 3. deploy
 4. repeat
 
-You can **code**, you **deploy** to fortrabbit. For the **testing** part you have can either: run tests locally before each `git push`;
- or integrate an external CI provider in your deployment and automate the whole process. 
+You can **code**, you **deploy** to fortrabbit. For the **testing** part you can either: run tests locally before each `git push`;
+ or integrate an external CI provider in your deployment and automate the whole process.
 
 
 This article helps you to integrate an external CI provider in your workflow.
 
 ## Usage
 
-```nohighlight 
- #####                      
+```nohighlight
+ #####
 # + + #     +———————————+  +—————————+  +————+  +————————————+
 # ––– #———> | Git local |->| GitHub… |->| CI |->| fortrabbit |
  #####      +———————————+  +—————————+  +————+  +————————————+
-  you                       
+  you
 ```
 
-Most, if not all, of the CI providers assume that you host your code on a public available version control (Git) repository. This does not mean your repository publicly accessible without authentication, just that it's not on your local host. You can use [GitHub](https://github.com) or [Bitbucket](http://bitbucket.org/) and [any other VCS provider](external-services) to host a (private) public repositories.
+Most, if not all, of the CI providers assume that you host your code on a public available version control (Git) repository. This does not mean your repository is publicly accessible without authentication, just that it's not on your local host. You can use [GitHub](https://github.com) or [Bitbucket](http://bitbucket.org/) and [any other VCS provider](external-services) to host a (private) public repositories.
 
 
 ### Workflow
