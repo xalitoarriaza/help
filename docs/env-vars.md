@@ -29,7 +29,7 @@ Use environment variables to keep local configurations out of the main code base
 
 ## ENV vars in PHP
 
-There is a two global variable called `$_SERVER` and `$_ENV` which contains environment variables that are available through the operating system and the PHP server. Within fortrabbit you should use `$_SERVER`, eg:
+There are two global variables called `$_SERVER` and `$_ENV` which contain environment variables that are available through the operating system and the PHP server. Within fortrabbit you should use `$_SERVER`, eg:
 
 ```php
 echo $_SERVER["MY_ENV_VAR"];
@@ -53,7 +53,7 @@ Solutions for specific frameworks or CMS can be found in their respective [insta
 
 Create a secret key and use the `mcrypt_encrypt()` function to encrypt and then base64 encode your variables. An exemplary PHP script doing that can be [downloaded from this Gist](https://gist.github.com/ukautz/3573878af39e81c009fa) and then executed locally.
 
-Start with generating a new key and storing this key somewher in your app's bootstrap code:
+Start with generating a new key and storing this key somewhere in your app's bootstrap code:
 
 ```bash
 php encrypt.php genkey

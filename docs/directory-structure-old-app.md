@@ -90,7 +90,6 @@ You can access a `/tmp` folder from your SSH account. However, this `/tmp` folde
 
 ## Other folders
 
-The rest of the folders (and files which are not shown here) are part of the standard Linux distribution. All this stuff is handled by us for you. So you don't have access privileges. You can't change things outside the above outlined context. 
+The rest of the folders (and files which are not shown here) are part of the standard Linux distribution. All this stuff is handled by us for you. So you don't have access privileges. You can't change things outside the above outlined context.
 
 In most most cases, you probably want to do this to match a certain (framework) directory structure. Just create this structure below `htdocs` and route your domain to the appropriate folder.
- No newline at end of file
