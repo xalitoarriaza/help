@@ -1,29 +1,27 @@
 fortrabbit help pages
 =====================
 
-Welcome to the source of the official fortrabbit documentation. These files here are written in MarkDown, with a little frontmatter meta-data on top. We include this repo as a Git subtree and publish it on: http://help.fortrabbit.com
+Welcome to the source of the official fortrabbit documentation. These files here are written in Markdown, with a little frontmatter meta-data on top. We include this repo as a Git subtree and publish it on: http://help.fortrabbit.com
 
 
 Contributing
 ------------
 
-Found a typo or an error? Do you want to add something about your framework or service? You are more than welcome to contribute here. 
+Found a typo or an error? Do you want to add something about your framework or service of choice? You are more than welcome to contribute. Please send us a PR.
 
 
 
 Writing guidelines
 ------------------
 
-Please check out other articles to find about the patterns to structure documents.
+Please check out other articles to get a feel for patterns. We will review any pull request and might re-factor the contents to best fit the overall structure.
 
 
 
 Front Matter syntax
 ------------------
 
-Each file has yml block on top. See here which tags are available and how to use them.
-
-
+Each markdown file requires a yaml block at the top. See here which attributes are available, how and when to use them.
 
 ```yaml
 # which template to use - "article", if in doubt
