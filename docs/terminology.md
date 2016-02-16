@@ -14,7 +14,7 @@ seeAlsoLinks:
     - new-apps
     - deployment
 
-tags: 
+tags:
     - beginner
 
 ---
@@ -32,7 +32,7 @@ tags:
 * **Developer**: a [team member](collaboration) role within the Dashboard
 * **Node**: a lightweight virtual container for a specific service
 * **Owner**: a [team member](collaboration) role within the Dashboard
-* **[Worker](worker)**: an optional Comoponent
+* **[Worker](worker)**: an optional Component
 * **PHP request**: a single call for a PHP file
 * **Tinkering level**: a scaling extension for small Apps and staging
 * **Production level**: a scaling extension state safe for live Apps

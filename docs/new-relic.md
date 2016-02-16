@@ -13,11 +13,11 @@ seeAlsoLinks:
 
 ## Usage
 
-We currently have a BYOL integration with New Relic. That basically means: You need an account over at New Relic. Then you only need to paste the license key in our dashboard.
+We currently have a BYOL integration with New Relic. That basically means: you need an account over at New Relic. Then you only need to paste the license key in our dashboard.
 
 ### Over at New Relic
 
-1. Sign up or log in to [New Relic](http://newrelic.com/). 
+1. Sign up or log in to [New Relic](http://newrelic.com/).
 1. Add a new application
 1. Copy the license key
 

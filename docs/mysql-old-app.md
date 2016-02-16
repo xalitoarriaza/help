@@ -22,7 +22,7 @@ seeAlsoLinks:
 ---
 
 
-PHP + MySQL is a classic. fortrabbit offers MySQL as an internal component for each App. It's use is optional and it comes in different sizes, you can [scale](scaling) it up and down any time without downtimes.
+PHP + MySQL is a classic. fortrabbit offers MySQL as an internal component for each App. Its use is optional and it comes in different sizes, you can [scale](scaling) it up and down any time without downtimes.
 
 
 ## Access MySQL from your App
@@ -57,7 +57,7 @@ For security reasons you can not connect to the MySQL database from "outside". B
 ### MySQL GUIs
 
 Sometimes it's handy to manage your MySQL database with a graphical interface.
- 
+
 #### Native (Desktop) App
 
 You can use a graphical interface like the official [MySQL Workbench](http://www.mysql.com/products/workbench/) (Mac/Linux/Windows). Most of those clients have connection presets that help you to establish the SSH tunnel and the MySQL connection in one convenient step.
@@ -70,7 +70,7 @@ Use phpMyAdmin or Chive locally instead. Once you have setup the [SSH tunnel](#t
 
 ### Terminal › Tunnel › MySQL
 
-If you are familiar with the shell then this is no biggie. In essence: Open up a tunnel to your App's MySQL database using your Apps SSH account.
+If you are familiar with the shell then this is no biggie. In essence: open up a tunnel to your App's MySQL database using your Apps SSH account.
 
 
 ```bash
@@ -94,7 +94,7 @@ WORD: Use `127.0.0.1`, not `localhost` as the database host!
 
 ###  Export & import
 
-A common task is to move your MySQL data around, are migrating to fortrabbit or you are about to set up a staging environment. GUIs have easy to use export/import wizards, in the terminal you can do this like so:
+A common task is to move your MySQL data around, e.g. if you are migrating to fortrabbit or you are about to set up a staging environment. GUIs have easy to use export/import wizards, in the terminal you can do this like so:
 
 
 #### mysqldump & mysql
@@ -136,7 +136,7 @@ mysql> LOAD DATA LOCAL INFILE '/path/to/tablename.sql' INTO TABLE tablename;
 
 MySQL has [time zone support](http://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html) Our nodes default to the standard time zone "UTC". If you want to change this time zone, you can do so on a "per connection" basis.
 
-There are two approaches to tackle this issue: Handle the time zone on application level or handle the time zone on database level. Each has it's merits and which one is better strongly depends on the use case. This article shows you how to set the time zone in the database.
+There are two approaches to tackle this issue: handle the time zone on application level or handle the time zone on database level. Each has its merits and which one is better strongly depends on the use case. This article shows you how to set the time zone in the database.
 
 #### Setting time zone in plain (My)SQL
 
@@ -210,7 +210,7 @@ doctrine:
         user:     %database_user%
         password: %database_password%
         charset:  UTF8
-        options: 
+        options:
             1002: "SET time_zone = '+02:00'"
 ```
 

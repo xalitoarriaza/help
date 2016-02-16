@@ -20,16 +20,16 @@ Should you migrate your Old Apps to New Apps today? Yes, good idea. The New Apps
 
 ### Asset storage
 
-Old Apps have a **persistent storage**: you have access via SSH and the App can permanently write on the file system. New Apps have an **ephemeral storage**: you have no SSH access, all files will be replaced on each deployment. There is no place for runtime data. In other words: your App should not write any relevant data (user uploads) you might want to reuse later on the local file system. 
+Old Apps have a **persistent storage**: you have access via SSH and the App can permanently write on the file system. New Apps have an **ephemeral storage**: you have no SSH access, all files will be replaced on each deployment. There is no place for runtime data. In other words: your App should not write any relevant data (user uploads) you might want to reuse later on the local file system.
 
-The upside is, it's a design that scales much better. The downside is, that you'll need some efforts from your side. Currently you can use an external [cloud storage provider](external-services#toc-cloud-storage). In the future you will offer an integrated service with fortrabbit.
+The upside is, it's a design that scales much better. The downside is, that you'll need some efforts from your side. Currently you can use an external [cloud storage provider](external-services#toc-cloud-storage). In the future you will be offered an integrated service with fortrabbit.
 
 
 ### Communication
 
 Don't worry to miss something. We are aware that this is a sensitive topic. We are in this together.  We will not just switch off your live Apps. We will look after each single App.
 
-Migration will take some efforts from your side, but it will be worth it. You will benefit form less costs, better performance and a better experience. 
+Migration will take some efforts from your side, but it will be worth it. You will benefit form less costs, better performance and a better experience.
 
 The "missing" Components will come soon. Then we'll also publish more detailed informations on how to migrate, a general article is already [over here](/migrating). We will also communicate informations and deadlines upfront. We will give you extensive support on this. We will not rush things, there will be enough time. We will not let you down.
 
@@ -45,11 +45,11 @@ The Old Apps offered [Git](git) and [SSH](ssh-sftp-old-app) deployment. With the
 
 ## Atomic deployment
 
-The Old Apps Git offer a synchronization deployment mode: the Git repo contents get's rsynced file by file. Per default this is non-destructive, new files and changes would replace old files, but no files will be deleted (overwrite but not delete).
+The Old Apps Git offer a synchronization deployment mode: the Git repo contents gets rsynced file by file. Per default this is non-destructive, new files and changes would replace old files, but no files will be deleted (overwrite but not delete).
 
 The New Apps deployment is [atomic](http://blog.fortrabbit.com/new-apps-are-here). That means that a completely new release package will substitute the old one on every deploy. We have made a [behind the scenes video](deployment-architecture-video) showcasing what is happening in the background. The atomic deployment features also a true build process: your code will only be released if all scripts (composer install, optional pre- and post-deploy scripts) succeed.
 
-Everything will feel familiar. You will most likely you'll first notice a different more detailed Git deploy log.
+Everything will feel familiar. You will most likely first notice a different, more detailed Git deploy log.
 
 
 ### Composer packages
@@ -85,7 +85,7 @@ New Apps don't require you to write a [.htaccess directive](http-auth) any more.
 
 ## App repository reset
 
-Only for New Apps: To start with a complete new Git history, you can now reset your repository. This can be done with the `reset` command like so:
+Only for New Apps: to start with a complete new Git history, you can now reset your repository. This can be done with the `reset` command like so:
 
 ```bash
 ssh git@deploy.eu2.frbit.com reset your-app-name
@@ -144,6 +144,6 @@ ssh log@log.eu2.frbit.com tail app-name mono
 ```
 
 
-## Further readings 
+## Further readings
 
 We have also written a comprehensive [blog post](http://blog.fortrabbit.com/new-apps-are-here) about the features, benefits, limits and backgrounds of the New Apps.

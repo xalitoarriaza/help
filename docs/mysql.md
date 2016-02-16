@@ -73,9 +73,9 @@ If you are familiar with the shell then this is no biggie. In essence: Open up a
 ssh -N -L 13306:my-app.mysql.eu2.frbit.com:3306 tunnel@tunnel.eu2.frbit.com
 ```
 
-`13306` is an arbitrary port. Choose something in the higher range (10000-65000). 
+`13306` is an arbitrary port. Choose something in the higher range (10000-65000).
 
-**This command will not reply with any message on success! If nothing shows up: you did right!** *This behavior is how most (all?) SSH clients are implemented and sadly we cannot issue any response message telling you that it worked. So mind: If you see no error, all is good.*
+**This command will not reply with any message on success! If nothing shows up: you did right!** *This behavior is how most (all?) SSH clients are implemented and sadly we cannot issue any response message telling you that it worked. So mind: if you see no error, all is good.*
 
 Once the tunnel is up, you can connect to your MySQL database with the `mysql` console client **from another terminal**:
 
@@ -88,7 +88,7 @@ You will be asked for password: enter your MySQL password in this step! Use `127
 
 ##  Export & import
 
-A common task is to move your MySQL data around, are migrating to fortrabbit or you are about to set up a staging environment. GUIs have easy to use export/import wizards, in the terminal you can do this like so:
+A common task is to move your MySQL data around, e.g. if you are migrating to fortrabbit or you are about to set up a staging environment. GUIs have easy to use export/import wizards, in the terminal you can do this like so:
 
 ### mysqldump & mysql
 
@@ -128,7 +128,7 @@ mysql> LOAD DATA LOCAL INFILE '/path/to/tablename.sql' INTO TABLE tablename;
 
 MySQL has [time zone support](http://dev.mysql.com/doc/refman/5.5/en/time-zone-support.html) Our nodes default to the standard time zone "UTC". If you want to change this time zone, you can do so on a "per connection" basis.
 
-There are two approaches to tackle this issue: Handle the time zone on application level or handle the time zone on database level. Each has it's merits and which one is better strongly depends on the use case. This article shows you how to set the time zone in the database.
+There are two approaches to tackle this issue: handle the time zone on application level or handle the time zone on database level. Each has its merits and which one is better strongly depends on the use case. This article shows you how to set the time zone in the database.
 
 #### Setting time zone in plain (My)SQL
 
